@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "plus-explorer"
+version = "0.1.0"
+description = ""
+authors = ["houfu <houfu@outlook.stg>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+streamlit = "^1.5.1"
+pandas = "^1.4.1"
+redlines = "^0.2.2"
+jupyter = { version = "^1.0.0", optional = true }
+textstat = { version = "^0.7.2", optional = true }
+
+[tool.poetry.extras]
+notebook = ["jupyter", "textstat"]
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
