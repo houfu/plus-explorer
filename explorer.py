@@ -1,15 +1,12 @@
 import re
 
 import pandas as pd
-import redlines
 import streamlit as st
-
-data = pd.read_csv('data.csv.gz')
+from redlines import Redlines
 
 st.title('PLUS Explorer')
-st.sidebar.write('''
-## Intro 
-
+with st.expander('Introduction'):
+    st.write('''
 On 31 December 2021, the [Attorney General Chambers of Singapore completed a universal revision of 
 Singapore's Acts of Parliament](https://www.agc.gov.sg/our-roles/drafter-of-laws/legislation-and-revisions).
 Among other changes implemented, **"Plain English is used as much as possible"**. 
@@ -20,11 +17,7 @@ A list of the types of changes made can be found [here](https://www-agc-gov-sg-a
 * Do they make legislation more readable?   
 
 In order to do this, a random selection of clauses in legislation are analysed using standard readability tests.
-
-### Select an App below to explore PLUS. 
 ''')
-
-st.sidebar.radio('Select App', ["Section Explorer", "Stat Explorer"])
 
 # Load data
 
@@ -50,23 +43,15 @@ with st.container():
 
     selected = st.selectbox("Select a Section to explore", section_explorer_select_index)
     section_explorer_select = section_explorer_select_index.get_loc(selected)
+    st.write(f'Total number of records: {section_explorer_select_index.size}')
     if st.button("Random"):
         import random
 
         section_explorer_select = random.choice(range(section_explorer_select_index.size))
 
     st.header(section_explorer_select_index[section_explorer_select])
-    st.subheader('Text comparison')
-    previous, current = st.columns(2)
-
-    previous.caption(f"Previous Text [Link]({dataset['previous_link'][section_explorer_select]})")
-    previous.write(dataset['previous'][section_explorer_select])
-
-    current.caption(f"2020 Rev Edn Text [Link]({dataset['current_link'][section_explorer_select]})")
-    current.write(dataset['current'][section_explorer_select])
-
     st.subheader('Mark Changes')
-    diff = redlines.Redlines(dataset['previous'][section_explorer_select], dataset['current'][section_explorer_select])
+    diff = Redlines(dataset['previous'][section_explorer_select], dataset['current'][section_explorer_select])
     st.markdown(diff.output_markdown, unsafe_allow_html=True)
     st.caption("**NB:** If there are no marked changes, the text is the same.")
 
@@ -91,3 +76,12 @@ with st.container():
     words.metric("No of Words", dataset["current_lexicon_count"][section_explorer_select],
                  dataset["current_lexicon_count"][section_explorer_select] -
                  dataset["previous_lexicon_count"][section_explorer_select], delta_color="off")
+
+    st.subheader('Text comparison')
+    previous, current = st.columns(2)
+
+    previous.caption(f"Previous Text [Link]({dataset['previous_link'][section_explorer_select]})")
+    previous.write(dataset['previous'][section_explorer_select])
+
+    current.caption(f"2020 Rev Edn Text [Link]({dataset['current_link'][section_explorer_select]})")
+    current.write(dataset['current'][section_explorer_select])

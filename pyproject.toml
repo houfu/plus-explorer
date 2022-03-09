@@ -11,9 +11,10 @@ pandas = "^1.4.1"
 redlines = "^0.2.2"
 jupyter = { version = "^1.0.0", optional = true }
 textstat = { version = "^0.7.2", optional = true }
+ipywidgets = { version = "^7.6.5", optional = true }
 
 [tool.poetry.extras]
-notebook = ["jupyter", "textstat"]
+notebook = ["jupyter", "textstat", "ipywidgets"]
 
 [tool.poetry.dev-dependencies]
 
