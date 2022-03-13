@@ -16,7 +16,21 @@ A list of the types of changes made can be found [here](https://www-agc-gov-sg-a
 * What are the changes made and how do they look like in a broad spectrum of clauses?
 * Do they make legislation more readable?   
 
-In order to do this, a random selection of clauses in legislation are analysed using standard readability tests.
+In order to do this, a random selection of clauses in legislation are analysed using common readability tests.
+
+_A note on the selection of sections_
+
+I manually and randomly selected 150 sections from Statutes Singapore Online and picked the latest 2020 Rev Edn version
+and compared it with the _immediately preceding_ version. 
+
+By random, 
+I mean that I went through a list of legislation, 
+picked one that seems interesting 
+and then picked a section which sounded interesting, 
+keeping in mind that I would like a variety of clauses in the dataset. 
+Some sections experienced _no changes at all_, 
+I left them inside the dataset as it was important to show that not all sections are affected by changes. 
+
 ''')
 
 # Load data
@@ -66,6 +80,10 @@ with st.container():
     ari.metric("Automated Readability Index", dataset["current_ari"][section_explorer_select],
                dataset["current_ari"][section_explorer_select] -
                dataset["previous_ari"][section_explorer_select], delta_color="inverse")
+    dale, _, _ = st.columns(3)
+    dale.metric("Dale-Chall Readability Score", dataset["current_dale-chall"][section_explorer_select],
+                dataset["current_dale-chall"][section_explorer_select] -
+                dataset["previous_dale-chall"][section_explorer_select], delta_color="inverse")
     length, words, sentences = st.columns(3)
     length.metric("Length of Section (Characters)", dataset["current_len"][section_explorer_select],
                   dataset["current_len"][section_explorer_select] -
