@@ -1,3 +1,4 @@
+import altair as alt
 import pandas as pd
 import streamlit as st
 
@@ -39,7 +40,7 @@ I left them inside the dataset as it was important to show that not all sections
 
 # Load data
 
-dataset = pd.read_csv("data.csv.gz")
+dataset = pd.read_csv("data.csv.gz", index_col=0)
 
 # Readability Score selector
 
@@ -61,6 +62,20 @@ if selected == "Word Count":
     Note that the wordier a section is, it is harder to read.
     However small changes to the number of words alone is neutral IMO.
     """)
+
+    word_count_view = dataset[["previous_lexicon_count", "current_lexicon_count"]].reset_index()
+    word_count_view['diff'] = word_count_view.index.map(
+        lambda x: word_count_view["current_lexicon_count"][x] - word_count_view['previous_lexicon_count'][x])
+
+    base = alt.Chart(word_count_view)
+
+    heatmap = base.mark_rect().encode(
+        x=alt.X('current_lexicon_count:O', title='2020 Word Count', bin=alt.BinParams(step=100)),
+        y=alt.Y('diff:O', title='Change in Word Count'),
+        color="count()"
+    )
+
+    st.altair_chart(heatmap)
 
 if selected == "Flesch Reading Ease":
     score_intro.write("""
