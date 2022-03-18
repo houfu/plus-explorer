@@ -75,7 +75,7 @@ if selected == "Word Count":
         color="count()"
     )
 
-    st.altair_chart(heatmap)
+    score_display.altair_chart(heatmap)
 
 if selected == "Flesch Reading Ease":
     score_intro.write("""
@@ -90,6 +90,73 @@ if selected == "Flesch Reading Ease":
     * Score of 10 to 30: Reading level of a University graduates. 
     * Score of less than 10: Reading level of a professional
     * Negative scores are possible under the formula.
+    """)
+
+    fre_view = dataset[['current_flesch_reading_ease', 'previous_flesch_reading_ease', 'current_lexicon_count']] \
+        .reset_index()
+
+    fre_view['diff'] = fre_view.index.map(
+        lambda x: fre_view["current_flesch_reading_ease"][x] - fre_view['previous_flesch_reading_ease'][x])
+
+    base = alt.Chart(fre_view)
+
+    heatmap = base.mark_circle(size=100).encode(
+        x=alt.X('current_lexicon_count', title='2020 Word Count'),
+        y=alt.Y('diff', title='Change in FRE', sort='-y'),
+        color=alt.Color('diff', scale=alt.Scale(scheme='pinkyellowgreen', domainMid=0, domainMin=-10, domainMax=10)),
+        tooltip=['index', "current_flesch_reading_ease", "diff"]
+    ).properties(
+        width=800,
+        height=800
+    )
+
+    positive_line = base.mark_rule(color='red', opacity=0.3).encode(
+        y='y:Q',
+    ).transform_calculate(
+        y='5'
+    )
+    negative_line = base.mark_rule(color='red', opacity=0.3).encode(
+        y='y:Q',
+    ).transform_calculate(
+        y='-5'
+    )
+
+    score_display.header('Change in FRE')
+
+    score_display.altair_chart(positive_line + negative_line + heatmap)
+
+    score_display.write('Red horizontal rules at Change of FRE = \u00B1 5 to show small changes.')
+
+    bars = base.mark_bar().encode(
+        x2=alt.X2('previous_flesch_reading_ease', title='Previous FRE'),
+        x=alt.X('current_flesch_reading_ease', title='2020 FRE'),
+        y=alt.Y('index', sort="-x", title='Section', axis=alt.Axis(labels=False)),
+        color=alt.Color('diff', scale=alt.Scale(scheme='pinkyellowgreen', domainMid=0, domainMin=-10, domainMax=10),
+                        title='Change in FRE'),
+        tooltip=['index', "current_flesch_reading_ease", "diff"],
+    ).properties(
+        height=1200,
+        width=800
+    )
+
+    G9_line = base.mark_rule(color='red', opacity=0.3).encode(
+        x='x:Q',
+    ).transform_calculate(
+        x='60'
+    )
+    Pro_line = base.mark_rule(color='red', opacity=0.3).encode(
+        x='x:Q',
+    ).transform_calculate(
+        x='10'
+    )
+
+    score_display.header('FRE Scores of each Section (ordered)')
+
+    score_display.altair_chart(bars + G9_line + Pro_line)
+
+    score_display.write("""
+    Red vertical rule at FRE = 60 to show ninth grade level.
+    Red vertical rule at FRE = 10 to show professional reading level.
     """)
 
 if selected == "Gunning FOG":
@@ -107,6 +174,67 @@ if selected == "Gunning FOG":
 
     """)
 
+    fog_view = dataset[['current_gunning_fog', 'previous_gunning_fog', 'current_lexicon_count']] \
+        .reset_index()
+
+    fog_view['diff'] = fog_view.index.map(
+        lambda x: fog_view["current_gunning_fog"][x] - fog_view['previous_gunning_fog'][x])
+
+    base = alt.Chart(fog_view)
+
+    heatmap = base.mark_circle(size=100).encode(
+        x=alt.X('current_lexicon_count', title='2020 Word Count'),
+        y=alt.Y('diff', title='Change in FOG', sort='descending'),
+        color=alt.Color('diff', scale=alt.Scale(scheme='pinkyellowgreen', domainMid=0, domainMin=-2, domainMax=2,
+                                                reverse=True)),
+        tooltip=['index', "current_gunning_fog", "diff"]
+    ).properties(
+        width=800,
+        height=800
+    )
+
+    positive_line = base.mark_rule(color='red', opacity=0.3).encode(
+        y='y:Q',
+    ).transform_calculate(
+        y='0.5'
+    )
+    negative_line = base.mark_rule(color='red', opacity=0.3).encode(
+        y='y:Q',
+    ).transform_calculate(
+        y='-0.5'
+    )
+
+    score_display.header('Changes in FOG Index')
+
+    score_display.altair_chart(positive_line + negative_line + heatmap)
+
+    score_display.write('Red horizontal rules at Change of FRE = \u00B1 0.5 to show small changes.')
+
+    bars = base.mark_bar().encode(
+        x2=alt.X2('previous_gunning_fog', title='Previous FOG'),
+        x=alt.X('current_gunning_fog', title='2020 FOG'),
+        y=alt.Y('index', sort="x", title='Section', axis=alt.Axis(labels=False)),
+        color=alt.Color('diff',
+                        scale=alt.Scale(scheme='pinkyellowgreen', domainMid=0, domainMin=-2, domainMax=2, reverse=True),
+                        title='Change in FOG'),
+        tooltip=['index', "current_gunning_fog", "diff"],
+    ).properties(
+        height=1200,
+        width=800
+    )
+
+    Pro_line = base.mark_rule(color='red', opacity=0.3).encode(
+        x='x:Q'
+    ).transform_calculate(
+        x='12'
+    )
+
+    score_display.header("FOG Index for each section (Ordered)")
+
+    score_display.altair_chart(Pro_line + bars)
+
+    score_display.write("Red vertical rule at FOG = 12 to show documents for a general audience.")
+
 if selected == "Automated Readability Index":
     score_intro.write("""
     ### Automated Readability Index
@@ -119,6 +247,65 @@ if selected == "Automated Readability Index":
     The higher the score, the less readable.
 
     """)
+
+    ari_view = dataset[['current_ari', 'previous_ari', 'current_lexicon_count']] \
+        .reset_index()
+
+    ari_view['diff'] = ari_view.index.map(
+        lambda x: ari_view["current_ari"][x] - ari_view['previous_ari'][x])
+
+    base = alt.Chart(ari_view)
+
+    heatmap = base.mark_circle(size=100).encode(
+        x=alt.X('current_lexicon_count', title='2020 Word Count'),
+        y=alt.Y('diff', title='Change in ARI', sort='descending'),
+        color=alt.Color('diff', scale=alt.Scale(scheme='pinkyellowgreen', domainMid=0, domainMin=-2, domainMax=2,
+                                                reverse=True)),
+        tooltip=['index', "current_ari", "diff"]
+    ).properties(
+        width=800,
+        height=800
+    )
+
+    positive_line = base.mark_rule(color='red', opacity=0.3).encode(
+        y='y:Q',
+    ).transform_calculate(
+        y='0.5'
+    )
+    negative_line = base.mark_rule(color='red', opacity=0.3).encode(
+        y='y:Q',
+    ).transform_calculate(
+        y='-0.5'
+    )
+
+    score_display.header('Changes in Automated Readability Index')
+
+    score_display.altair_chart(positive_line + negative_line + heatmap)
+
+    score_display.write('Red horizontal rules at Change of ARI = \u00B1 0.5 to show small changes.')
+
+    bars = base.mark_bar().encode(
+        x2=alt.X2('previous_ari', title='Previous ARI'),
+        x=alt.X('current_ari', title='2020 ARI'),
+        y=alt.Y('index', sort="x", title='Section', axis=alt.Axis(labels=False)),
+        color=alt.Color('diff',
+                        scale=alt.Scale(scheme='pinkyellowgreen', domainMid=0, domainMin=-2, domainMax=2, reverse=True),
+                        title='Change in ARI'),
+        tooltip=['index', "current_ari", "diff"],
+    ).properties(
+        height=1200,
+        width=800
+    )
+
+    G9_line = base.mark_rule(color='red', opacity=0.3).encode(
+        x='x:Q',
+    ).transform_calculate(
+        x='9'
+    )
+
+    score_display.header("Automated Readability Index for each section (Ordered)")
+    score_display.altair_chart(G9_line + bars)
+    score_display.write("Red vertical rule at ARI = 9 to show Grade 9 readability.")
 
 if selected == "Dale-Chall":
     score_intro.write("""
@@ -133,4 +320,71 @@ if selected == "Dale-Chall":
     
     The higher the score, the less readable.
     Scores of 9 to 9.9 are considered easily understood by an average 13th to 15th-grade (college) student.
+    """)
+
+    dc_view = dataset[['current_dale-chall', 'previous_dale-chall', 'current_lexicon_count']] \
+        .reset_index()
+
+    dc_view['diff'] = dc_view.index.map(
+        lambda x: dc_view["current_dale-chall"][x] - dc_view['previous_dale-chall'][x])
+
+    base = alt.Chart(dc_view)
+
+    heatmap = base.mark_circle(size=100).encode(
+        x=alt.X('current_lexicon_count', title='2020 Word Count'),
+        y=alt.Y('diff', title='Change in DC', sort='descending'),
+        color=alt.Color('diff', scale=alt.Scale(scheme='pinkyellowgreen', domainMid=0, reverse=True),
+                        title='Change in DC'),
+        tooltip=['index', "current_dale-chall", "diff"]
+    ).properties(
+        width=800,
+        height=800
+    )
+
+    positive_line = base.mark_rule(color='red', opacity=0.3).encode(
+        y='y:Q',
+    ).transform_calculate(
+        y='0.5'
+    )
+    negative_line = base.mark_rule(color='red', opacity=0.3).encode(
+        y='y:Q',
+    ).transform_calculate(
+        y='-0.5'
+    )
+
+    score_display.header('Changes in Dale-Chall Scores')
+    score_display.altair_chart(positive_line + negative_line + heatmap)
+    score_display.write('Red horizontal rules at Change of DC = \u00B1 0.5 to show small changes.')
+
+    bars = base.mark_bar().encode(
+        x2=alt.X2('previous_dale-chall', title='Previous DC'),
+        x=alt.X('current_dale-chall', title='2020 DC'),
+        y=alt.Y('index', sort="x", title='Section', axis=alt.Axis(labels=False)),
+        color=alt.Color('diff',
+                        scale=alt.Scale(scheme='pinkyellowgreen', domainMid=0, reverse=True),
+                        title='Change in DC'),
+        tooltip=['index', "current_dale-chall", "diff"],
+    ).properties(
+        height=1200,
+        width=800
+    )
+
+    G9_line = base.mark_rule(color='red', opacity=0.3).encode(
+        x='x:Q',
+    ).transform_calculate(
+        x='7.0'
+    )
+
+    G14_line = base.mark_rule(color='red', opacity=0.3).encode(
+        x='x:Q',
+    ).transform_calculate(
+        x='9.9'
+    )
+
+    score_display.header("Dale-Chall scores for each section (Ordered)")
+    score_display.altair_chart(G9_line + G14_line + bars)
+    score_display.write("""
+    Red vertical rule at DC = 7 to show easily understood by a secondary 3 student.
+    
+    Red vertical rule at DC = 9.9 to show easily understood by college student.
     """)
