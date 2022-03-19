@@ -1,5 +1,3 @@
-import re
-
 import pandas as pd
 import streamlit as st
 from redlines import Redlines
@@ -10,7 +8,8 @@ with st.expander('Introduction'):
 On 31 December 2021, the [Attorney General Chambers of Singapore completed a universal revision of 
 Singapore's Acts of Parliament](https://www.agc.gov.sg/our-roles/drafter-of-laws/legislation-and-revisions).
 Among other changes implemented, **"Plain English is used as much as possible"**. 
-A list of the types of changes made can be found [here](https://www-agc-gov-sg-admin.cwp.sg/docs/default-source/our-roles-documents/drafter-of-laws/list-of-standard-revision-changes.pdf).
+A list of the types of changes made can be found 
+[here](https://www-agc-gov-sg-admin.cwp.sg/docs/default-source/our-roles-documents/drafter-of-laws/list-of-standard-revision-changes.pdf).
 
 **PLUS Explorer** aims to explore the following issues: 
 * What are the changes made and how do they look like in a broad spectrum of clauses?
@@ -35,35 +34,32 @@ I left them inside the dataset as it was important to show that not all sections
 
 # Load data
 
-dataset = pd.read_csv("data.csv.gz")
+dataset = pd.read_csv("data.csv.gz", index_col=0)
 
 
 # Section Explorer
 
-def map_index(i):
-    match = re.search(r"pr(\w*)", dataset["current_link"][i])
-    return f"{dataset['act_name'][i]} Section {match.group(1) if match else ''}"
-
-
-section_explorer_select_index = dataset.index.map(map_index)
-
-
 def random_button_clicked():
-    return random.choice(section_explorer_select_index.to_list())
+    return random.choice(dataset.index.to_list())
 
 
 with st.container():
     st.write("## Section Explorer")
 
-    selected = st.selectbox("Select a Section to explore", section_explorer_select_index)
-    section_explorer_select = section_explorer_select_index.get_loc(selected)
-    st.write(f'Total number of records: {section_explorer_select_index.size}')
+    selected = st.selectbox("Select a Section to explore", dataset.index)
+    section_explorer_select = dataset.index.get_loc(selected)
+    st.write(f'Total number of records: {dataset.index.size}')
     if st.button("Random"):
         import random
 
-        section_explorer_select = random.choice(range(section_explorer_select_index.size))
+        random_select = random.choice(range(dataset.index.size))
+        st.experimental_set_query_params(section=dataset.index[random_select])
 
-    st.header(section_explorer_select_index[section_explorer_select])
+    query_params = st.experimental_get_query_params()
+    if "section" in query_params:
+        section_explorer_select = query_params.get("section")[0]
+
+    st.header(section_explorer_select)
     st.subheader('Mark Changes')
     diff = Redlines(dataset['previous'][section_explorer_select], dataset['current'][section_explorer_select])
     st.markdown(diff.output_markdown, unsafe_allow_html=True)
