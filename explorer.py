@@ -72,8 +72,8 @@ with st.container():
 
     st.subheader('Readability Statistics')
     flesch, fog, ari = st.columns(3)
-    flesch.metric("Flesch Reading Ease", dataset["current_flesch_kincaid_grade"][section_explorer_select],
-                  dataset["current_flesch_kincaid_grade"][section_explorer_select] -
+    flesch.metric("Flesch Reading Ease", dataset["current_flesch_reading_ease"][section_explorer_select],
+                  dataset["current_flesch_reading_ease"][section_explorer_select] -
                   dataset["previous_flesch_reading_ease"][section_explorer_select])
     fog.metric("Fog Scale", dataset["current_gunning_fog"][section_explorer_select],
                dataset["current_gunning_fog"][section_explorer_select] -
