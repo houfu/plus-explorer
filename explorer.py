@@ -50,8 +50,7 @@ def on_select():
 with st.container():
     st.write("## Section Explorer")
 
-    selected = st.selectbox("Select a Section to explore", dataset.index, on_change=on_select, key='selectbox')
-    section_explorer_select = dataset.index.get_loc(selected)
+    st.selectbox("Select a Section to explore", dataset.index, on_change=on_select, key='selectbox')
     st.write(f'Total number of records: {dataset.index.size}')
     if st.button("Random"):
         import random

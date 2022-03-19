@@ -1,3 +1,5 @@
+from urllib.parse import urlencode
+
 import altair as alt
 import pandas as pd
 import streamlit as st
@@ -41,6 +43,12 @@ I left them inside the dataset as it was important to show that not all sections
 # Load data
 
 dataset = pd.read_csv("data.csv.gz", index_col=0)
+
+
+@st.cache
+def get_url(index: str):
+    return 'https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?' + urlencode({'section': index})
+
 
 # Readability Score selector
 
@@ -92,8 +100,8 @@ if selected == "Flesch Reading Ease":
     * Negative scores are possible under the formula.
     """)
 
-    fre_view = dataset[['current_flesch_reading_ease', 'previous_flesch_reading_ease', 'current_lexicon_count']] \
-        .reset_index()
+    fre_view = dataset[
+        ['current_flesch_reading_ease', 'previous_flesch_reading_ease', 'current_lexicon_count', 'url']].reset_index()
 
     fre_view['diff'] = fre_view.index.map(
         lambda x: fre_view["current_flesch_reading_ease"][x] - fre_view['previous_flesch_reading_ease'][x])
@@ -104,7 +112,8 @@ if selected == "Flesch Reading Ease":
         x=alt.X('current_lexicon_count', title='2020 Word Count'),
         y=alt.Y('diff', title='Change in FRE', sort='-y'),
         color=alt.Color('diff', scale=alt.Scale(scheme='pinkyellowgreen', domainMid=0, domainMin=-10, domainMax=10)),
-        tooltip=['index', "current_flesch_reading_ease", "diff"]
+        tooltip=['index', "current_flesch_reading_ease", "diff"],
+        href='url:N'
     ).properties(
         width=800,
         height=800
@@ -134,6 +143,7 @@ if selected == "Flesch Reading Ease":
         color=alt.Color('diff', scale=alt.Scale(scheme='pinkyellowgreen', domainMid=0, domainMin=-10, domainMax=10),
                         title='Change in FRE'),
         tooltip=['index', "current_flesch_reading_ease", "diff"],
+        href='url:N'
     ).properties(
         height=1200,
         width=800
@@ -174,7 +184,7 @@ if selected == "Gunning FOG":
 
     """)
 
-    fog_view = dataset[['current_gunning_fog', 'previous_gunning_fog', 'current_lexicon_count']] \
+    fog_view = dataset[['current_gunning_fog', 'previous_gunning_fog', 'current_lexicon_count', 'url']] \
         .reset_index()
 
     fog_view['diff'] = fog_view.index.map(
@@ -187,7 +197,8 @@ if selected == "Gunning FOG":
         y=alt.Y('diff', title='Change in FOG', sort='descending'),
         color=alt.Color('diff', scale=alt.Scale(scheme='pinkyellowgreen', domainMid=0, domainMin=-2, domainMax=2,
                                                 reverse=True)),
-        tooltip=['index', "current_gunning_fog", "diff"]
+        tooltip=['index', "current_gunning_fog", "diff"],
+        href='url:N'
     ).properties(
         width=800,
         height=800
@@ -218,6 +229,7 @@ if selected == "Gunning FOG":
                         scale=alt.Scale(scheme='pinkyellowgreen', domainMid=0, domainMin=-2, domainMax=2, reverse=True),
                         title='Change in FOG'),
         tooltip=['index', "current_gunning_fog", "diff"],
+        href='url:N'
     ).properties(
         height=1200,
         width=800
@@ -248,7 +260,7 @@ if selected == "Automated Readability Index":
 
     """)
 
-    ari_view = dataset[['current_ari', 'previous_ari', 'current_lexicon_count']] \
+    ari_view = dataset[['current_ari', 'previous_ari', 'current_lexicon_count', 'url']] \
         .reset_index()
 
     ari_view['diff'] = ari_view.index.map(
@@ -261,7 +273,8 @@ if selected == "Automated Readability Index":
         y=alt.Y('diff', title='Change in ARI', sort='descending'),
         color=alt.Color('diff', scale=alt.Scale(scheme='pinkyellowgreen', domainMid=0, domainMin=-2, domainMax=2,
                                                 reverse=True)),
-        tooltip=['index', "current_ari", "diff"]
+        tooltip=['index', "current_ari", "diff"],
+        href='url:N'
     ).properties(
         width=800,
         height=800
@@ -292,6 +305,7 @@ if selected == "Automated Readability Index":
                         scale=alt.Scale(scheme='pinkyellowgreen', domainMid=0, domainMin=-2, domainMax=2, reverse=True),
                         title='Change in ARI'),
         tooltip=['index', "current_ari", "diff"],
+        href='url:N'
     ).properties(
         height=1200,
         width=800
@@ -322,7 +336,7 @@ if selected == "Dale-Chall":
     Scores of 9 to 9.9 are considered easily understood by an average 13th to 15th-grade (college) student.
     """)
 
-    dc_view = dataset[['current_dale-chall', 'previous_dale-chall', 'current_lexicon_count']] \
+    dc_view = dataset[['current_dale-chall', 'previous_dale-chall', 'current_lexicon_count', 'url']] \
         .reset_index()
 
     dc_view['diff'] = dc_view.index.map(
@@ -335,7 +349,8 @@ if selected == "Dale-Chall":
         y=alt.Y('diff', title='Change in DC', sort='descending'),
         color=alt.Color('diff', scale=alt.Scale(scheme='pinkyellowgreen', domainMid=0, reverse=True),
                         title='Change in DC'),
-        tooltip=['index', "current_dale-chall", "diff"]
+        tooltip=['index', "current_dale-chall", "diff"],
+        href='url:N'
     ).properties(
         width=800,
         height=800
