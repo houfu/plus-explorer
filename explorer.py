@@ -43,10 +43,14 @@ def random_button_clicked():
     return random.choice(dataset.index.to_list())
 
 
+def on_select():
+    st.experimental_set_query_params(section=st.session_state.selectbox)
+
+
 with st.container():
     st.write("## Section Explorer")
 
-    selected = st.selectbox("Select a Section to explore", dataset.index)
+    selected = st.selectbox("Select a Section to explore", dataset.index, on_change=on_select, key='selectbox')
     section_explorer_select = dataset.index.get_loc(selected)
     st.write(f'Total number of records: {dataset.index.size}')
     if st.button("Random"):
@@ -58,6 +62,8 @@ with st.container():
     query_params = st.experimental_get_query_params()
     if "section" in query_params:
         section_explorer_select = query_params.get("section")[0]
+    else:
+        section_explorer_select = 'Civil Law Act 1909 Section 6'
 
     st.header(section_explorer_select)
     st.subheader('Mark Changes')
