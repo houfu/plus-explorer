@@ -149,10 +149,10 @@ if selected == "Flesch Reading Ease":
         width=800
     )
 
-    G9_line = base.mark_rule(color='red', opacity=0.3).encode(
+    G10_line = base.mark_rule(color='red', opacity=0.3).encode(
         x='x:Q',
     ).transform_calculate(
-        x='60'
+        x='50'
     )
     Pro_line = base.mark_rule(color='red', opacity=0.3).encode(
         x='x:Q',
@@ -160,9 +160,14 @@ if selected == "Flesch Reading Ease":
         x='10'
     )
 
+    line = base.mark_line().encode(
+        x=alt.X('current_flesch_reading_ease', title='2020 FRE'),
+        y=alt.Y('index', sort="-x", title='Section', axis=alt.Axis(labels=False)),
+    )
+
     score_display.header('FRE Scores of each Section (ordered)')
 
-    score_display.altair_chart(bars + G9_line + Pro_line)
+    score_display.altair_chart(bars + G10_line + Pro_line + line)
 
     score_display.write("""
     Red vertical rule at FRE = 60 to show ninth grade level.
@@ -241,9 +246,14 @@ if selected == "Gunning FOG":
         x='12'
     )
 
+    line = base.mark_line().encode(
+        x=alt.X('current_gunning_fog', title='2020 FOG'),
+        y=alt.Y('index', sort="x", title='Section', axis=alt.Axis(labels=False)),
+    )
+
     score_display.header("FOG Index for each section (Ordered)")
 
-    score_display.altair_chart(Pro_line + bars)
+    score_display.altair_chart(Pro_line + bars + line)
 
     score_display.write("Red vertical rule at FOG = 12 to show documents for a general audience.")
 
@@ -311,15 +321,20 @@ if selected == "Automated Readability Index":
         width=800
     )
 
-    G9_line = base.mark_rule(color='red', opacity=0.3).encode(
+    G10_line = base.mark_rule(color='red', opacity=0.3).encode(
         x='x:Q',
     ).transform_calculate(
-        x='9'
+        x='10'
+    )
+
+    line = base.mark_line().encode(
+        x=alt.X('current_ari', title='2020 ARI'),
+        y=alt.Y('index', sort="x", title='Section', axis=alt.Axis(labels=False)),
     )
 
     score_display.header("Automated Readability Index for each section (Ordered)")
-    score_display.altair_chart(G9_line + bars)
-    score_display.write("Red vertical rule at ARI = 9 to show Grade 9 readability.")
+    score_display.altair_chart(G10_line + bars + line)
+    score_display.write("Red vertical rule at ARI = 10 to show Grade 10 / Secondary School readability.")
 
 if selected == "Dale-Chall":
     score_intro.write("""
@@ -384,6 +399,11 @@ if selected == "Dale-Chall":
         width=800
     )
 
+    line = base.mark_line().encode(
+        x=alt.X('current_dale-chall', title='2020 DC'),
+        y=alt.Y('index', sort="x", title='Section', axis=alt.Axis(labels=False)),
+    )
+
     G9_line = base.mark_rule(color='red', opacity=0.3).encode(
         x='x:Q',
     ).transform_calculate(
@@ -397,7 +417,7 @@ if selected == "Dale-Chall":
     )
 
     score_display.header("Dale-Chall scores for each section (Ordered)")
-    score_display.altair_chart(G9_line + G14_line + bars)
+    score_display.altair_chart(G9_line + G14_line + bars + line)
     score_display.write("""
     Red vertical rule at DC = 7 to show easily understood by a secondary 3 student.
     
