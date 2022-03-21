@@ -2,6 +2,16 @@ import pandas as pd
 import streamlit as st
 from redlines import Redlines
 
+st.set_page_config(
+    page_title='PLUS Explorer - Section',
+    page_icon='🔭',
+    menu_items={
+        'About': """
+        Read the [blog post](https://www.lovelawrobots.com/evaluating-legislation-for-readability-exploring-plus/).
+        """
+    }
+)
+
 st.title('PLUS Explorer')
 with st.expander('Introduction'):
     st.write('''

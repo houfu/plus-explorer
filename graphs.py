@@ -4,6 +4,16 @@ import altair as alt
 import pandas as pd
 import streamlit as st
 
+st.set_page_config(
+    page_title='PLUS Explorer - Graphs',
+    page_icon='📊',
+    menu_items={
+        'About': """
+        Read the [blog post](https://www.lovelawrobots.com/evaluating-legislation-for-readability-exploring-plus/).
+        """
+    }
+)
+
 st.title('PLUS Explorer - Graphs')
 
 with st.expander('Introduction'):
@@ -13,16 +23,7 @@ Singapore's Acts of Parliament](https://www.agc.gov.sg/our-roles/drafter-of-laws
 Among other changes implemented, **"Plain English is used as much as possible"**. 
 A list of the types of changes made can be found [here](https://www-agc-gov-sg-admin.cwp.sg/docs/default-source/our-roles-documents/drafter-of-laws/list-of-standard-revision-changes.pdf).
 
-Let's visualise how much the changes affected readability using common readability tests.
-    
-To do this, we bunch up a selection of random clauses so that we can see two things:
-* Whether the change improved or worsened the readability of the section. 
-    * A Red circle represents the original readability score.
-    * A Blue circle represents the new readability score.
-    * A red line between them shows the change worsened the readability score.
-    * A blue line between them shows the change improved the readability score.
-* How much the change improved or worsened the readability of the section.
-    * This is shown by the distance between the circle.
+Read the [blog post](https://www.lovelawrobots.com/evaluating-legislation-for-readability-exploring-plus/) on this project.
 
 
 _A note on the selection of sections_
@@ -394,6 +395,7 @@ if selected == "Dale-Chall":
                         scale=alt.Scale(scheme='pinkyellowgreen', domainMid=0, reverse=True),
                         title='Change in DC'),
         tooltip=['index', "current_dale-chall", "diff"],
+        href='url:N'
     ).properties(
         height=1200,
         width=800

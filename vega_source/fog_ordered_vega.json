@@ -1,0 +1,1327 @@
+{
+  "config": {
+    "view": {
+      "continuousWidth": 400,
+      "continuousHeight": 300
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "color": "red",
+        "opacity": 0.3
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        }
+      },
+      "transform": [
+        {
+          "calculate": "12",
+          "as": "x"
+        }
+      ]
+    },
+    {
+      "mark": "bar",
+      "encoding": {
+        "color": {
+          "field": "diff",
+          "scale": {
+            "domainMax": 2,
+            "domainMid": 0,
+            "domainMin": -2,
+            "reverse": true,
+            "scheme": "pinkyellowgreen"
+          },
+          "title": "Change in FOG",
+          "type": "quantitative"
+        },
+        "href": {
+          "field": "url",
+          "type": "nominal"
+        },
+        "tooltip": [
+          {
+            "field": "index",
+            "type": "nominal"
+          },
+          {
+            "field": "current_gunning_fog",
+            "type": "quantitative"
+          },
+          {
+            "field": "diff",
+            "type": "quantitative"
+          }
+        ],
+        "x": {
+          "field": "current_gunning_fog",
+          "title": "2020 FOG",
+          "type": "quantitative"
+        },
+        "x2": {
+          "field": "previous_gunning_fog",
+          "title": "Previous FOG"
+        },
+        "y": {
+          "axis": {
+            "labels": false
+          },
+          "field": "index",
+          "sort": "x",
+          "title": "Section",
+          "type": "nominal"
+        }
+      },
+      "height": 1200,
+      "width": 800
+    },
+    {
+      "mark": "line",
+      "encoding": {
+        "x": {
+          "field": "current_gunning_fog",
+          "title": "2020 FOG",
+          "type": "quantitative"
+        },
+        "y": {
+          "axis": {
+            "labels": false
+          },
+          "field": "index",
+          "sort": "x",
+          "title": "Section",
+          "type": "nominal"
+        }
+      }
+    }
+  ],
+  "data": {
+    "name": "data-4c0d4575cf37afdb75cd6981454f4b09"
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json",
+  "datasets": {
+    "data-4c0d4575cf37afdb75cd6981454f4b09": [
+      {
+        "index": "Civil Law Act 1909 Section 6",
+        "current_gunning_fog": 55.32,
+        "previous_gunning_fog": 55.32,
+        "current_lexicon_count": 129.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Civil+Law+Act+1909+Section+6",
+        "diff": 0.0
+      },
+      {
+        "index": "Consumer Protection (Fair Trading) Act 2003 Section 27",
+        "current_gunning_fog": 23.34,
+        "previous_gunning_fog": 23.28,
+        "current_lexicon_count": 204.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Consumer+Protection+%28Fair+Trading%29+Act+2003+Section+27",
+        "diff": 0.05999999999999872
+      },
+      {
+        "index": "Constitution of the Republic of Singapore Section 5",
+        "current_gunning_fog": 15.87,
+        "previous_gunning_fog": 22.74,
+        "current_lexicon_count": 75.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Constitution+of+the+Republic+of+Singapore+Section+5",
+        "diff": -6.869999999999999
+      },
+      {
+        "index": "Contributory Negligence and Personal Injuries Act 1953 Section 3",
+        "current_gunning_fog": 25.19,
+        "previous_gunning_fog": 25.19,
+        "current_lexicon_count": 335.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Contributory+Negligence+and+Personal+Injuries+Act+1953+Section+3",
+        "diff": 0.0
+      },
+      {
+        "index": "Community Disputes Resolution Act 2015 Section 12",
+        "current_gunning_fog": 21.88,
+        "previous_gunning_fog": 22.2,
+        "current_lexicon_count": 46.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Community+Disputes+Resolution+Act+2015+Section+12",
+        "diff": -0.3200000000000003
+      },
+      {
+        "index": "Corruption, Drug Trafficking and Other Serious Crimes (Confiscation of Benefits) Act 1992 Section 16",
+        "current_gunning_fog": 25.69,
+        "previous_gunning_fog": 25.19,
+        "current_lexicon_count": 292.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Corruption%2C+Drug+Trafficking+and+Other+Serious+Crimes+%28Confiscation+of+Benefits%29+Act+1992+Section+16",
+        "diff": 0.5
+      },
+      {
+        "index": "Criminal Law (Temporary Provisions) Act 1955 Section 4",
+        "current_gunning_fog": 23.12,
+        "previous_gunning_fog": 23.12,
+        "current_lexicon_count": 206.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Criminal+Law+%28Temporary+Provisions%29+Act+1955+Section+4",
+        "diff": 0.0
+      },
+      {
+        "index": "Criminal Law (Temporary Provisions) Act 1955 Section 16",
+        "current_gunning_fog": 22.68,
+        "previous_gunning_fog": 22.77,
+        "current_lexicon_count": 140.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Criminal+Law+%28Temporary+Provisions%29+Act+1955+Section+16",
+        "diff": -0.08999999999999986
+      },
+      {
+        "index": "Customs Act 1960 Section 33",
+        "current_gunning_fog": 16.27,
+        "previous_gunning_fog": 16.0,
+        "current_lexicon_count": 31.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Customs+Act+1960+Section+33",
+        "diff": 0.2699999999999996
+      },
+      {
+        "index": "Customs Act 1960 Section 37",
+        "current_gunning_fog": 56.59,
+        "previous_gunning_fog": 56.59,
+        "current_lexicon_count": 134.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Customs+Act+1960+Section+37",
+        "diff": 0.0
+      },
+      {
+        "index": "Cybersecurity Act 2018 Section 7",
+        "current_gunning_fog": 28.79,
+        "previous_gunning_fog": 28.79,
+        "current_lexicon_count": 576.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Cybersecurity+Act+2018+Section+7",
+        "diff": 0.0
+      },
+      {
+        "index": "Destitute Persons Act 1989 Section 15",
+        "current_gunning_fog": 16.55,
+        "previous_gunning_fog": 16.55,
+        "current_lexicon_count": 26.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Destitute+Persons+Act+1989+Section+15",
+        "diff": 0.0
+      },
+      {
+        "index": "Destitute Persons Act 1989 Section 19",
+        "current_gunning_fog": 18.0,
+        "previous_gunning_fog": 19.78,
+        "current_lexicon_count": 40.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Destitute+Persons+Act+1989+Section+19",
+        "diff": -1.7800000000000011
+      },
+      {
+        "index": "Distress Act 1934 Section 17",
+        "current_gunning_fog": 45.04,
+        "previous_gunning_fog": 45.04,
+        "current_lexicon_count": 106.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Distress+Act+1934+Section+17",
+        "diff": 0.0
+      },
+      {
+        "index": "Dangerous Fireworks Act 1972 Section 4",
+        "current_gunning_fog": 19.76,
+        "previous_gunning_fog": 19.51,
+        "current_lexicon_count": 242.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Dangerous+Fireworks+Act+1972+Section+4",
+        "diff": 0.25
+      },
+      {
+        "index": "Defence Science and Technology Agency Act 2000 Section 31",
+        "current_gunning_fog": 25.35,
+        "previous_gunning_fog": 25.51,
+        "current_lexicon_count": 106.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Defence+Science+and+Technology+Agency+Act+2000+Section+31",
+        "diff": -0.16000000000000014
+      },
+      {
+        "index": "Defence Science and Technology Agency Act 2000 Section 32",
+        "current_gunning_fog": 26.67,
+        "previous_gunning_fog": 32.81,
+        "current_lexicon_count": 226.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Defence+Science+and+Technology+Agency+Act+2000+Section+32",
+        "diff": -6.140000000000001
+      },
+      {
+        "index": "Deposit Insurance and Policy Owners\u2019 Protection Schemes Act 2011 Section 5",
+        "current_gunning_fog": 18.51,
+        "previous_gunning_fog": 18.62,
+        "current_lexicon_count": 132.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Deposit+Insurance+and+Policy+Owners%E2%80%99+Protection+Schemes+Act+2011+Section+5",
+        "diff": -0.10999999999999943
+      },
+      {
+        "index": "Deposit Insurance and Policy Owners\u2019 Protection Schemes Act 2011 Section 21",
+        "current_gunning_fog": 24.16,
+        "previous_gunning_fog": 24.42,
+        "current_lexicon_count": 202.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Deposit+Insurance+and+Policy+Owners%E2%80%99+Protection+Schemes+Act+2011+Section+21",
+        "diff": -0.26000000000000156
+      },
+      {
+        "index": "District Cooling Act 2001 Section 19",
+        "current_gunning_fog": 20.93,
+        "previous_gunning_fog": 20.93,
+        "current_lexicon_count": 126.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=District+Cooling+Act+2001+Section+19",
+        "diff": 0.0
+      },
+      {
+        "index": "Deep Seabed Mining Act 2015 Section 17",
+        "current_gunning_fog": 20.67,
+        "previous_gunning_fog": 20.67,
+        "current_lexicon_count": 90.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Deep+Seabed+Mining+Act+2015+Section+17",
+        "diff": 0.0
+      },
+      {
+        "index": "Debtors Act 1934 Section 6",
+        "current_gunning_fog": 28.83,
+        "previous_gunning_fog": 28.83,
+        "current_lexicon_count": 123.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Debtors+Act+1934+Section+6",
+        "diff": 0.0
+      },
+      {
+        "index": "Accountants Act 2004 Section 22",
+        "current_gunning_fog": 21.93,
+        "previous_gunning_fog": 21.81,
+        "current_lexicon_count": 115.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Accountants+Act+2004+Section+22",
+        "diff": 0.120000000000001
+      },
+      {
+        "index": "Accountants Act 2004 Section 36",
+        "current_gunning_fog": 53.86,
+        "previous_gunning_fog": 53.28,
+        "current_lexicon_count": 370.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Accountants+Act+2004+Section+36",
+        "diff": 0.5799999999999983
+      },
+      {
+        "index": "Active Mobility Act 2017 Section 12",
+        "current_gunning_fog": 11.94,
+        "previous_gunning_fog": 11.94,
+        "current_lexicon_count": 87.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Active+Mobility+Act+2017+Section+12",
+        "diff": 0.0
+      },
+      {
+        "index": "Active Mobility Act 2017 Section 23A",
+        "current_gunning_fog": 26.58,
+        "previous_gunning_fog": 26.58,
+        "current_lexicon_count": 295.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Active+Mobility+Act+2017+Section+23A",
+        "diff": 0.0
+      },
+      {
+        "index": "Active Mobility Act 2017 Section 24",
+        "current_gunning_fog": 23.89,
+        "previous_gunning_fog": 23.89,
+        "current_lexicon_count": 375.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Active+Mobility+Act+2017+Section+24",
+        "diff": 0.0
+      },
+      {
+        "index": "Administration of Justice (Protection) Act 2016 Section 17",
+        "current_gunning_fog": 25.48,
+        "previous_gunning_fog": 26.67,
+        "current_lexicon_count": 172.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Administration+of+Justice+%28Protection%29+Act+2016+Section+17",
+        "diff": -1.1900000000000013
+      },
+      {
+        "index": "Administration of Justice (Protection) Act 2016 Section 33",
+        "current_gunning_fog": 19.0,
+        "previous_gunning_fog": 19.33,
+        "current_lexicon_count": 40.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Administration+of+Justice+%28Protection%29+Act+2016+Section+33",
+        "diff": -0.3299999999999983
+      },
+      {
+        "index": "Administration of Justice (Protection) Act 2016 Section 34",
+        "current_gunning_fog": 22.82,
+        "previous_gunning_fog": 19.71,
+        "current_lexicon_count": 160.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Administration+of+Justice+%28Protection%29+Act+2016+Section+34",
+        "diff": 3.1099999999999994
+      },
+      {
+        "index": "Administration of Muslim Law Act 1966 Section 5",
+        "current_gunning_fog": 24.07,
+        "previous_gunning_fog": 24.13,
+        "current_lexicon_count": 246.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Administration+of+Muslim+Law+Act+1966+Section+5",
+        "diff": -0.05999999999999872
+      },
+      {
+        "index": "Administration of Muslim Law Act 1966 Section 27",
+        "current_gunning_fog": 12.54,
+        "previous_gunning_fog": 12.28,
+        "current_lexicon_count": 193.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Administration+of+Muslim+Law+Act+1966+Section+27",
+        "diff": 0.2599999999999998
+      },
+      {
+        "index": "Adoption of Children Act 1939 Section 3",
+        "current_gunning_fog": 15.25,
+        "previous_gunning_fog": 15.25,
+        "current_lexicon_count": 170.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Adoption+of+Children+Act+1939+Section+3",
+        "diff": 0.0
+      },
+      {
+        "index": "Adoption of Children Act 1939 Section 7",
+        "current_gunning_fog": 44.61,
+        "previous_gunning_fog": 44.65,
+        "current_lexicon_count": 948.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Adoption+of+Children+Act+1939+Section+7",
+        "diff": -0.03999999999999915
+      },
+      {
+        "index": "Advance Medical Directive Act 1996 Section 13",
+        "current_gunning_fog": 24.4,
+        "previous_gunning_fog": 23.78,
+        "current_lexicon_count": 100.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Advance+Medical+Directive+Act+1996+Section+13",
+        "diff": 0.6199999999999974
+      },
+      {
+        "index": "Advance Medical Directive Act 1996 Section 21",
+        "current_gunning_fog": 16.91,
+        "previous_gunning_fog": 17.75,
+        "current_lexicon_count": 84.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Advance+Medical+Directive+Act+1996+Section+21",
+        "diff": -0.8399999999999999
+      },
+      {
+        "index": "Air Navigation Act 1966 Section 4",
+        "current_gunning_fog": 46.63,
+        "previous_gunning_fog": 47.01,
+        "current_lexicon_count": 438.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Air+Navigation+Act+1966+Section+4",
+        "diff": -0.37999999999999545
+      },
+      {
+        "index": "Air Navigation Act 1966 Section 27",
+        "current_gunning_fog": 34.75,
+        "previous_gunning_fog": 34.42,
+        "current_lexicon_count": 555.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Air+Navigation+Act+1966+Section+27",
+        "diff": 0.3299999999999983
+      },
+      {
+        "index": "Animals and Birds Act 1965 Section 10",
+        "current_gunning_fog": 27.79,
+        "previous_gunning_fog": 27.45,
+        "current_lexicon_count": 245.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Animals+and+Birds+Act+1965+Section+10",
+        "diff": 0.33999999999999986
+      },
+      {
+        "index": "Animals and Birds Act 1965 Section 28",
+        "current_gunning_fog": 23.84,
+        "previous_gunning_fog": 23.84,
+        "current_lexicon_count": 99.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Animals+and+Birds+Act+1965+Section+28",
+        "diff": 0.0
+      },
+      {
+        "index": "Apostille Act 2020 Section 6",
+        "current_gunning_fog": 71.09,
+        "previous_gunning_fog": 71.09,
+        "current_lexicon_count": 165.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Apostille+Act+2020+Section+6",
+        "diff": 0.0
+      },
+      {
+        "index": "Apostille Act 2020 Section 17",
+        "current_gunning_fog": 28.5,
+        "previous_gunning_fog": 28.5,
+        "current_lexicon_count": 123.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Apostille+Act+2020+Section+17",
+        "diff": 0.0
+      },
+      {
+        "index": "Arbitration Act 2001 Section 4",
+        "current_gunning_fog": 17.74,
+        "previous_gunning_fog": 17.63,
+        "current_lexicon_count": 317.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Arbitration+Act+2001+Section+4",
+        "diff": 0.10999999999999943
+      },
+      {
+        "index": "Arbitration Act 2001 Section 39",
+        "current_gunning_fog": 22.52,
+        "previous_gunning_fog": 22.1,
+        "current_lexicon_count": 254.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Arbitration+Act+2001+Section+39",
+        "diff": 0.41999999999999815
+      },
+      {
+        "index": "Architects Act 1991 Section 31J",
+        "current_gunning_fog": 38.02,
+        "previous_gunning_fog": 37.54,
+        "current_lexicon_count": 83.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Architects+Act+1991+Section+31J",
+        "diff": 0.480000000000004
+      },
+      {
+        "index": "Arms and Explosives Act 1913 Section 6",
+        "current_gunning_fog": 32.42,
+        "previous_gunning_fog": 33.42,
+        "current_lexicon_count": 283.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Arms+and+Explosives+Act+1913+Section+6",
+        "diff": -1.0
+      },
+      {
+        "index": "Arms and Explosives Act 1913 Section 22",
+        "current_gunning_fog": 26.82,
+        "previous_gunning_fog": 26.82,
+        "current_lexicon_count": 117.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Arms+and+Explosives+Act+1913+Section+22",
+        "diff": 0.0
+      },
+      {
+        "index": "Audit Act 1966 Section 6A",
+        "current_gunning_fog": 35.03,
+        "previous_gunning_fog": 35.13,
+        "current_lexicon_count": 230.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Audit+Act+1966+Section+6A",
+        "diff": -0.10000000000000142
+      },
+      {
+        "index": "Banking Act 1970 Section 9",
+        "current_gunning_fog": 24.75,
+        "previous_gunning_fog": 25.13,
+        "current_lexicon_count": 495.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Banking+Act+1970+Section+9",
+        "diff": -0.379999999999999
+      },
+      {
+        "index": "Banking Act 1970 Section 57B",
+        "current_gunning_fog": 17.6,
+        "previous_gunning_fog": 17.44,
+        "current_lexicon_count": 103.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Banking+Act+1970+Section+57B",
+        "diff": 0.16000000000000014
+      },
+      {
+        "index": "Betting Act 1960 Section 17",
+        "current_gunning_fog": 22.2,
+        "previous_gunning_fog": 22.2,
+        "current_lexicon_count": 47.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Betting+Act+1960+Section+17",
+        "diff": 0.0
+      },
+      {
+        "index": "Bills of Exchange Act 1949 Section 8",
+        "current_gunning_fog": 14.48,
+        "previous_gunning_fog": 14.48,
+        "current_lexicon_count": 147.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Bills+of+Exchange+Act+1949+Section+8",
+        "diff": 0.0
+      },
+      {
+        "index": "Bills of Exchange Act 1949 Section 22",
+        "current_gunning_fog": 18.56,
+        "previous_gunning_fog": 18.56,
+        "current_lexicon_count": 109.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Bills+of+Exchange+Act+1949+Section+22",
+        "diff": 0.0
+      },
+      {
+        "index": "Bills of Exchange Act 1949 Section 47",
+        "current_gunning_fog": 15.63,
+        "previous_gunning_fog": 15.63,
+        "current_lexicon_count": 62.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Bills+of+Exchange+Act+1949+Section+47",
+        "diff": 0.0
+      },
+      {
+        "index": "Bills of Lading Act 1992 Section 3",
+        "current_gunning_fog": 33.16,
+        "previous_gunning_fog": 33.53,
+        "current_lexicon_count": 232.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Bills+of+Lading+Act+1992+Section+3",
+        "diff": -0.37000000000000455
+      },
+      {
+        "index": "Bills of Sale Act 1886 Section 17",
+        "current_gunning_fog": 39.75,
+        "previous_gunning_fog": 29.34,
+        "current_lexicon_count": 176.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Bills+of+Sale+Act+1886+Section+17",
+        "diff": 10.41
+      },
+      {
+        "index": "Broadcasting Act 1994 Section 9",
+        "current_gunning_fog": 17.08,
+        "previous_gunning_fog": 17.12,
+        "current_lexicon_count": 121.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Broadcasting+Act+1994+Section+9",
+        "diff": -0.0400000000000027
+      },
+      {
+        "index": "Broadcasting Act 1994 Section 59",
+        "current_gunning_fog": 14.59,
+        "previous_gunning_fog": 14.72,
+        "current_lexicon_count": 109.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Broadcasting+Act+1994+Section+59",
+        "diff": -0.13000000000000078
+      },
+      {
+        "index": "Building Control Act 1989 Section 22E",
+        "current_gunning_fog": 42.12,
+        "previous_gunning_fog": 41.83,
+        "current_lexicon_count": 492.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Building+Control+Act+1989+Section+22E",
+        "diff": 0.28999999999999915
+      },
+      {
+        "index": "Building Control Act 1989 Section 31",
+        "current_gunning_fog": 34.11,
+        "previous_gunning_fog": 33.57,
+        "current_lexicon_count": 464.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Building+Control+Act+1989+Section+31",
+        "diff": 0.5399999999999991
+      },
+      {
+        "index": "Carbon Pricing Act 2018 Section 26",
+        "current_gunning_fog": 9.56,
+        "previous_gunning_fog": 9.56,
+        "current_lexicon_count": 37.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Carbon+Pricing+Act+2018+Section+26",
+        "diff": 0.0
+      },
+      {
+        "index": "CareShield Life and Long-Term Care Act 2019 Section 20",
+        "current_gunning_fog": 45.79,
+        "previous_gunning_fog": 45.79,
+        "current_lexicon_count": 216.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=CareShield+Life+and+Long-Term+Care+Act+2019+Section+20",
+        "diff": 0.0
+      },
+      {
+        "index": "Carriage by Air Act 1988 Section 6",
+        "current_gunning_fog": 30.24,
+        "previous_gunning_fog": 30.66,
+        "current_lexicon_count": 338.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Carriage+by+Air+Act+1988+Section+6",
+        "diff": -0.4200000000000017
+      },
+      {
+        "index": "Carriage of Goods by Sea Act 1972 Section 4",
+        "current_gunning_fog": 18.31,
+        "previous_gunning_fog": 18.31,
+        "current_lexicon_count": 34.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Carriage+of+Goods+by+Sea+Act+1972+Section+4",
+        "diff": 0.0
+      },
+      {
+        "index": "Casino Control Act 2006 Section 41",
+        "current_gunning_fog": 15.19,
+        "previous_gunning_fog": 15.19,
+        "current_lexicon_count": 59.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Casino+Control+Act+2006+Section+41",
+        "diff": 0.0
+      },
+      {
+        "index": "Casino Control Act 2006 Section 99",
+        "current_gunning_fog": 16.55,
+        "previous_gunning_fog": 16.55,
+        "current_lexicon_count": 52.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Casino+Control+Act+2006+Section+99",
+        "diff": 0.0
+      },
+      {
+        "index": "Census Act 1973 Section 7",
+        "current_gunning_fog": 16.79,
+        "previous_gunning_fog": 16.12,
+        "current_lexicon_count": 73.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Census+Act+1973+Section+7",
+        "diff": 0.6699999999999982
+      },
+      {
+        "index": "Census Act 1973 Section 25",
+        "current_gunning_fog": 16.33,
+        "previous_gunning_fog": 16.33,
+        "current_lexicon_count": 49.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Census+Act+1973+Section+25",
+        "diff": 0.0
+      },
+      {
+        "index": "Charities Act 1994 Section 9",
+        "current_gunning_fog": 28.0,
+        "previous_gunning_fog": 28.11,
+        "current_lexicon_count": 577.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Charities+Act+1994+Section+9",
+        "diff": -0.10999999999999943
+      },
+      {
+        "index": "Charities Act 1994 Section 20",
+        "current_gunning_fog": 35.04,
+        "previous_gunning_fog": 35.15,
+        "current_lexicon_count": 718.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Charities+Act+1994+Section+20",
+        "diff": -0.10999999999999943
+      },
+      {
+        "index": "Children and Young Persons Act 1993 Section 16",
+        "current_gunning_fog": 29.91,
+        "previous_gunning_fog": 29.84,
+        "current_lexicon_count": 266.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Children+and+Young+Persons+Act+1993+Section+16",
+        "diff": 0.07000000000000028
+      },
+      {
+        "index": "Children and Young Persons Act 1993 Section 44",
+        "current_gunning_fog": 31.36,
+        "previous_gunning_fog": 30.25,
+        "current_lexicon_count": 366.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Children+and+Young+Persons+Act+1993+Section+44",
+        "diff": 1.1099999999999994
+      },
+      {
+        "index": "Children and Young Persons Act 1993 Section 81",
+        "current_gunning_fog": 24.65,
+        "previous_gunning_fog": 24.3,
+        "current_lexicon_count": 221.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Children+and+Young+Persons+Act+1993+Section+81",
+        "diff": 0.34999999999999787
+      },
+      {
+        "index": "Children and Young Persons Act 1993 Section 23",
+        "current_gunning_fog": 41.86,
+        "previous_gunning_fog": 41.86,
+        "current_lexicon_count": 94.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Children+and+Young+Persons+Act+1993+Section+23",
+        "diff": 0.0
+      },
+      {
+        "index": "Contracts (Rights of Third Parties) Act 2001 Section 4",
+        "current_gunning_fog": 22.97,
+        "previous_gunning_fog": 22.15,
+        "current_lexicon_count": 322.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Contracts+%28Rights+of+Third+Parties%29+Act+2001+Section+4",
+        "diff": 0.8200000000000003
+      },
+      {
+        "index": "Community Disputes Resolution Act 2015 Section 4",
+        "current_gunning_fog": 24.88,
+        "previous_gunning_fog": 24.88,
+        "current_lexicon_count": 380.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Community+Disputes+Resolution+Act+2015+Section+4",
+        "diff": 0.0
+      },
+      {
+        "index": "Community Disputes Resolution Act 2015 Section 23",
+        "current_gunning_fog": 14.36,
+        "previous_gunning_fog": 14.36,
+        "current_lexicon_count": 111.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Community+Disputes+Resolution+Act+2015+Section+23",
+        "diff": 0.0
+      },
+      {
+        "index": "Compulsory Education Act 2000 Section 3",
+        "current_gunning_fog": 20.0,
+        "previous_gunning_fog": 20.07,
+        "current_lexicon_count": 120.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Compulsory+Education+Act+2000+Section+3",
+        "diff": -0.07000000000000028
+      },
+      {
+        "index": "Computer Misuse Act 1993 Section 3",
+        "current_gunning_fog": 26.66,
+        "previous_gunning_fog": 26.52,
+        "current_lexicon_count": 176.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Computer+Misuse+Act+1993+Section+3",
+        "diff": 0.14000000000000057
+      },
+      {
+        "index": "Computer Misuse Act 1993 Section 12",
+        "current_gunning_fog": 18.31,
+        "previous_gunning_fog": 18.31,
+        "current_lexicon_count": 68.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Computer+Misuse+Act+1993+Section+12",
+        "diff": 0.0
+      },
+      {
+        "index": "Contributory Negligence and Personal Injuries Act 1953 Section 3",
+        "current_gunning_fog": 25.19,
+        "previous_gunning_fog": 25.19,
+        "current_lexicon_count": 335.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Contributory+Negligence+and+Personal+Injuries+Act+1953+Section+3",
+        "diff": 0.0
+      },
+      {
+        "index": "Consumer Protection (Fair Trading) Act 2003 Section 4",
+        "current_gunning_fog": 49.46,
+        "previous_gunning_fog": 50.17,
+        "current_lexicon_count": 114.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Consumer+Protection+%28Fair+Trading%29+Act+2003+Section+4",
+        "diff": -0.7100000000000009
+      },
+      {
+        "index": "Consumer Protection (Fair Trading) Act 2003 Section 29",
+        "current_gunning_fog": 30.2,
+        "previous_gunning_fog": 30.2,
+        "current_lexicon_count": 206.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Consumer+Protection+%28Fair+Trading%29+Act+2003+Section+29",
+        "diff": 0.0
+      },
+      {
+        "index": "Consumer Protection (Fair Trading) Act 2003 Section 41",
+        "current_gunning_fog": 17.72,
+        "previous_gunning_fog": 17.98,
+        "current_lexicon_count": 100.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Consumer+Protection+%28Fair+Trading%29+Act+2003+Section+41",
+        "diff": -0.26000000000000156
+      },
+      {
+        "index": "Criminal Procedure Code 2010 Section 7",
+        "current_gunning_fog": 33.82,
+        "previous_gunning_fog": 33.85,
+        "current_lexicon_count": 221.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Criminal+Procedure+Code+2010+Section+7",
+        "diff": -0.030000000000001137
+      },
+      {
+        "index": "Criminal Procedure Code 2010 Section 33",
+        "current_gunning_fog": 27.24,
+        "previous_gunning_fog": 27.02,
+        "current_lexicon_count": 171.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Criminal+Procedure+Code+2010+Section+33",
+        "diff": 0.21999999999999886
+      },
+      {
+        "index": "Criminal Procedure Code 2010 Section 161",
+        "current_gunning_fog": 26.23,
+        "previous_gunning_fog": 26.34,
+        "current_lexicon_count": 246.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Criminal+Procedure+Code+2010+Section+161",
+        "diff": -0.10999999999999943
+      },
+      {
+        "index": "Criminal Procedure Code 2010 Section 224",
+        "current_gunning_fog": 28.8,
+        "previous_gunning_fog": 28.73,
+        "current_lexicon_count": 308.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Criminal+Procedure+Code+2010+Section+224",
+        "diff": 0.07000000000000028
+      },
+      {
+        "index": "Criminal Procedure Code 2010 Section 307",
+        "current_gunning_fog": 24.91,
+        "previous_gunning_fog": 24.72,
+        "current_lexicon_count": 114.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Criminal+Procedure+Code+2010+Section+307",
+        "diff": 0.19000000000000128
+      },
+      {
+        "index": "Criminal Procedure Code 2010 Section 308",
+        "current_gunning_fog": 16.18,
+        "previous_gunning_fog": 16.15,
+        "current_lexicon_count": 253.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Criminal+Procedure+Code+2010+Section+308",
+        "diff": 0.030000000000001137
+      },
+      {
+        "index": "Criminal Procedure Code 2010 Section 357",
+        "current_gunning_fog": 40.17,
+        "previous_gunning_fog": 39.45,
+        "current_lexicon_count": 275.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Criminal+Procedure+Code+2010+Section+357",
+        "diff": 0.7199999999999989
+      },
+      {
+        "index": "Holidays Act 1998 Section 4",
+        "current_gunning_fog": 14.06,
+        "previous_gunning_fog": 14.06,
+        "current_lexicon_count": 56.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Holidays+Act+1998+Section+4",
+        "diff": 0.0
+      },
+      {
+        "index": "Sale of Goods Act 1979 Section 12",
+        "current_gunning_fog": 24.09,
+        "previous_gunning_fog": 24.13,
+        "current_lexicon_count": 340.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Sale+of+Goods+Act+1979+Section+12",
+        "diff": -0.03999999999999915
+      },
+      {
+        "index": "Sale of Goods Act 1979 Section 34",
+        "current_gunning_fog": 28.99,
+        "previous_gunning_fog": 28.99,
+        "current_lexicon_count": 61.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Sale+of+Goods+Act+1979+Section+34",
+        "diff": 0.0
+      },
+      {
+        "index": "Sale of Goods Act 1979 Section 81T",
+        "current_gunning_fog": 27.71,
+        "previous_gunning_fog": 27.71,
+        "current_lexicon_count": 57.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Sale+of+Goods+Act+1979+Section+81T",
+        "diff": 0.0
+      },
+      {
+        "index": "Securities and Futures Act 2001 Section 81U",
+        "current_gunning_fog": 18.06,
+        "previous_gunning_fog": 18.01,
+        "current_lexicon_count": 340.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Securities+and+Futures+Act+2001+Section+81U",
+        "diff": 0.04999999999999716
+      },
+      {
+        "index": "Securities and Futures Act 2001 Section 199",
+        "current_gunning_fog": 60.66,
+        "previous_gunning_fog": 59.18,
+        "current_lexicon_count": 141.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Securities+and+Futures+Act+2001+Section+199",
+        "diff": 1.4799999999999969
+      },
+      {
+        "index": "Sedition Act 1948 Section 3",
+        "current_gunning_fog": 49.88,
+        "previous_gunning_fog": 49.62,
+        "current_lexicon_count": 350.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Sedition+Act+1948+Section+3",
+        "diff": 0.2600000000000051
+      },
+      {
+        "index": "Silver Support Scheme Act 2015 Section 6",
+        "current_gunning_fog": 29.91,
+        "previous_gunning_fog": 30.26,
+        "current_lexicon_count": 133.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Silver+Support+Scheme+Act+2015+Section+6",
+        "diff": -0.3500000000000014
+      },
+      {
+        "index": "Singapore Arms and Flag and National Anthem Act 1959 Section 2",
+        "current_gunning_fog": 39.78,
+        "previous_gunning_fog": 39.78,
+        "current_lexicon_count": 93.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Singapore+Arms+and+Flag+and+National+Anthem+Act+1959+Section+2",
+        "diff": 0.0
+      },
+      {
+        "index": "Singapore Convention on Mediation Act 2020 Section 4",
+        "current_gunning_fog": 41.67,
+        "previous_gunning_fog": 41.67,
+        "current_lexicon_count": 195.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Singapore+Convention+on+Mediation+Act+2020+Section+4",
+        "diff": 0.0
+      },
+      {
+        "index": "Official Secrets Act 1935 Section 9",
+        "current_gunning_fog": 26.09,
+        "previous_gunning_fog": 26.19,
+        "current_lexicon_count": 173.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Official+Secrets+Act+1935+Section+9",
+        "diff": -0.10000000000000142
+      },
+      {
+        "index": "Oaths and Declarations Act 2000 Section 11",
+        "current_gunning_fog": 15.49,
+        "previous_gunning_fog": 17.33,
+        "current_lexicon_count": 56.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Oaths+and+Declarations+Act+2000+Section+11",
+        "diff": -1.839999999999998
+      },
+      {
+        "index": "Organised Crime Act 2015 Section 12",
+        "current_gunning_fog": 27.33,
+        "previous_gunning_fog": 27.33,
+        "current_lexicon_count": 180.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Organised+Crime+Act+2015+Section+12",
+        "diff": 0.0
+      },
+      {
+        "index": "Organised Crime Act 2015 Section 28",
+        "current_gunning_fog": 26.1,
+        "previous_gunning_fog": 25.88,
+        "current_lexicon_count": 305.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Organised+Crime+Act+2015+Section+28",
+        "diff": 0.22000000000000242
+      },
+      {
+        "index": "Weights and Measures Act 1975 Section 32",
+        "current_gunning_fog": 30.85,
+        "previous_gunning_fog": 29.48,
+        "current_lexicon_count": 135.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Weights+and+Measures+Act+1975+Section+32",
+        "diff": 1.370000000000001
+      },
+      {
+        "index": "Parks and Trees Act 2005 Section 14",
+        "current_gunning_fog": 20.94,
+        "previous_gunning_fog": 21.0,
+        "current_lexicon_count": 249.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Parks+and+Trees+Act+2005+Section+14",
+        "diff": -0.05999999999999872
+      },
+      {
+        "index": "Payment Services Act 2019 Section 15",
+        "current_gunning_fog": 36.49,
+        "previous_gunning_fog": 36.73,
+        "current_lexicon_count": 237.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Payment+Services+Act+2019+Section+15",
+        "diff": -0.23999999999999488
+      },
+      {
+        "index": "Personal Data Protection Act 2012 Section 3",
+        "current_gunning_fog": 30.52,
+        "previous_gunning_fog": 30.52,
+        "current_lexicon_count": 57.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Personal+Data+Protection+Act+2012+Section+3",
+        "diff": 0.0
+      },
+      {
+        "index": "Personal Data Protection Act 2012 Section 24",
+        "current_gunning_fog": 29.2,
+        "previous_gunning_fog": 29.2,
+        "current_lexicon_count": 48.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Personal+Data+Protection+Act+2012+Section+24",
+        "diff": 0.0
+      },
+      {
+        "index": "Presidential Elections Act 1991 Section 10",
+        "current_gunning_fog": 19.54,
+        "previous_gunning_fog": 19.16,
+        "current_lexicon_count": 433.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Presidential+Elections+Act+1991+Section+10",
+        "diff": 0.379999999999999
+      },
+      {
+        "index": "Prevention of Corruption Act 1960 Section 6",
+        "current_gunning_fog": 97.28,
+        "previous_gunning_fog": 97.28,
+        "current_lexicon_count": 236.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Prevention+of+Corruption+Act+1960+Section+6",
+        "diff": 0.0
+      },
+      {
+        "index": "Prevention of Human Trafficking Act 2014 Section 11",
+        "current_gunning_fog": 17.22,
+        "previous_gunning_fog": 17.18,
+        "current_lexicon_count": 81.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Prevention+of+Human+Trafficking+Act+2014+Section+11",
+        "diff": 0.03999999999999915
+      },
+      {
+        "index": "Prevention of Human Trafficking Act 2014 Section 21",
+        "current_gunning_fog": 29.21,
+        "previous_gunning_fog": 29.21,
+        "current_lexicon_count": 263.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Prevention+of+Human+Trafficking+Act+2014+Section+21",
+        "diff": 0.0
+      },
+      {
+        "index": "Private Education Act 2009 Section 19",
+        "current_gunning_fog": 33.2,
+        "previous_gunning_fog": 33.2,
+        "current_lexicon_count": 207.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Private+Education+Act+2009+Section+19",
+        "diff": 0.0
+      },
+      {
+        "index": "Prevention of Pollution of the Sea Act 1990 Section 5",
+        "current_gunning_fog": 33.58,
+        "previous_gunning_fog": 33.58,
+        "current_lexicon_count": 73.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Prevention+of+Pollution+of+the+Sea+Act+1990+Section+5",
+        "diff": 0.0
+      },
+      {
+        "index": "Private Security Industry Act 2007 Section 26",
+        "current_gunning_fog": 21.69,
+        "previous_gunning_fog": 21.83,
+        "current_lexicon_count": 249.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Private+Security+Industry+Act+2007+Section+26",
+        "diff": -0.13999999999999702
+      },
+      {
+        "index": "Probate and Administration Act 1934 Section 26",
+        "current_gunning_fog": 13.08,
+        "previous_gunning_fog": 13.08,
+        "current_lexicon_count": 41.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Probate+and+Administration+Act+1934+Section+26",
+        "diff": 0.0
+      },
+      {
+        "index": "Probate and Administration Act 1934 Section 39",
+        "current_gunning_fog": 43.17,
+        "previous_gunning_fog": 43.17,
+        "current_lexicon_count": 101.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Probate+and+Administration+Act+1934+Section+39",
+        "diff": 0.0
+      },
+      {
+        "index": "Probation of Offenders Act 1951 Section 5",
+        "current_gunning_fog": 33.07,
+        "previous_gunning_fog": 36.43,
+        "current_lexicon_count": 828.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Probation+of+Offenders+Act+1951+Section+5",
+        "diff": -3.3599999999999994
+      },
+      {
+        "index": "Planning Act 1998 Section 49",
+        "current_gunning_fog": 22.0,
+        "previous_gunning_fog": 21.75,
+        "current_lexicon_count": 40.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Planning+Act+1998+Section+49",
+        "diff": 0.25
+      },
+      {
+        "index": "Point-to-Point Passenger Transport Industry Act 2019 Section 3",
+        "current_gunning_fog": 96.6,
+        "previous_gunning_fog": 96.21,
+        "current_lexicon_count": 236.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Point-to-Point+Passenger+Transport+Industry+Act+2019+Section+3",
+        "diff": 0.39000000000000057
+      },
+      {
+        "index": "Poisons Act 1938 Section 9",
+        "current_gunning_fog": 32.56,
+        "previous_gunning_fog": 32.56,
+        "current_lexicon_count": 221.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Poisons+Act+1938+Section+9",
+        "diff": 0.0
+      },
+      {
+        "index": "Political Donations Act 2000 Section 12",
+        "current_gunning_fog": 26.35,
+        "previous_gunning_fog": 26.46,
+        "current_lexicon_count": 242.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Political+Donations+Act+2000+Section+12",
+        "diff": -0.10999999999999943
+      },
+      {
+        "index": "Public Entertainments Act 1958 Section 9",
+        "current_gunning_fog": 8.2,
+        "previous_gunning_fog": 8.04,
+        "current_lexicon_count": 8.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Public+Entertainments+Act+1958+Section+9",
+        "diff": 0.16000000000000014
+      },
+      {
+        "index": "Property Tax Act 1960 Section 10",
+        "current_gunning_fog": 21.81,
+        "previous_gunning_fog": 22.01,
+        "current_lexicon_count": 297.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Property+Tax+Act+1960+Section+10",
+        "diff": -0.20000000000000284
+      },
+      {
+        "index": "Protection from Online Falsehoods and Manipulation Act 2019 Section 16",
+        "current_gunning_fog": 23.23,
+        "previous_gunning_fog": 23.23,
+        "current_lexicon_count": 207.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Protection+from+Online+Falsehoods+and+Manipulation+Act+2019+Section+16",
+        "diff": 0.0
+      },
+      {
+        "index": "Protection from Harassment Act 2014 Section 7",
+        "current_gunning_fog": 25.89,
+        "previous_gunning_fog": 27.5,
+        "current_lexicon_count": 894.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Protection+from+Harassment+Act+2014+Section+7",
+        "diff": -1.6099999999999994
+      },
+      {
+        "index": "Public Trustee Act 1915 Section 4",
+        "current_gunning_fog": 27.22,
+        "previous_gunning_fog": 26.47,
+        "current_lexicon_count": 541.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Public+Trustee+Act+1915+Section+4",
+        "diff": 0.75
+      },
+      {
+        "index": "Public Utilities Act 2001 Section 5",
+        "current_gunning_fog": 11.9,
+        "previous_gunning_fog": 11.81,
+        "current_lexicon_count": 39.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Public+Utilities+Act+2001+Section+5",
+        "diff": 0.08999999999999986
+      },
+      {
+        "index": "Penal Code 1871 Section 26F",
+        "current_gunning_fog": 16.2,
+        "previous_gunning_fog": 16.2,
+        "current_lexicon_count": 56.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Penal+Code+1871+Section+26F",
+        "diff": 0.0
+      },
+      {
+        "index": "Penal Code 1871 Section 80",
+        "current_gunning_fog": 15.73,
+        "previous_gunning_fog": 15.73,
+        "current_lexicon_count": 213.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Penal+Code+1871+Section+80",
+        "diff": 0.0
+      },
+      {
+        "index": "Penal Code 1871 Section 107",
+        "current_gunning_fog": 17.3,
+        "previous_gunning_fog": 17.3,
+        "current_lexicon_count": 238.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Penal+Code+1871+Section+107",
+        "diff": 0.0
+      },
+      {
+        "index": "Penal Code 1871 Section 142",
+        "current_gunning_fog": 18.67,
+        "previous_gunning_fog": 18.67,
+        "current_lexicon_count": 30.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Penal+Code+1871+Section+142",
+        "diff": 0.0
+      },
+      {
+        "index": "Penal Code 1871 Section 182",
+        "current_gunning_fog": 22.16,
+        "previous_gunning_fog": 22.16,
+        "current_lexicon_count": 298.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Penal+Code+1871+Section+182",
+        "diff": 0.0
+      },
+      {
+        "index": "Penal Code 1871 Section 300",
+        "current_gunning_fog": 13.86,
+        "previous_gunning_fog": 14.14,
+        "current_lexicon_count": 1924.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Penal+Code+1871+Section+300",
+        "diff": -0.28000000000000114
+      },
+      {
+        "index": "Penal Code 1871 Section 464",
+        "current_gunning_fog": 18.4,
+        "previous_gunning_fog": 18.96,
+        "current_lexicon_count": 1306.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Penal+Code+1871+Section+464",
+        "diff": -0.5600000000000023
+      },
+      {
+        "index": "Early Childhood Development Centres Act 2017 Section 17",
+        "current_gunning_fog": 22.05,
+        "previous_gunning_fog": 22.21,
+        "current_lexicon_count": 328.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Early+Childhood+Development+Centres+Act+2017+Section+17",
+        "diff": -0.16000000000000014
+      },
+      {
+        "index": "Electronic Transactions Act 2010 Section 5",
+        "current_gunning_fog": 25.32,
+        "previous_gunning_fog": 25.55,
+        "current_lexicon_count": 160.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Electronic+Transactions+Act+2010+Section+5",
+        "diff": -0.23000000000000043
+      },
+      {
+        "index": "Electronic Transactions Act 2010 Section 26",
+        "current_gunning_fog": 30.12,
+        "previous_gunning_fog": 30.36,
+        "current_lexicon_count": 263.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Electronic+Transactions+Act+2010+Section+26",
+        "diff": -0.23999999999999844
+      },
+      {
+        "index": "Employment Act 1968 Section 37",
+        "current_gunning_fog": 39.46,
+        "previous_gunning_fog": 38.41,
+        "current_lexicon_count": 573.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Employment+Act+1968+Section+37",
+        "diff": 1.0500000000000043
+      },
+      {
+        "index": "Employment Agencies Act 1958 Section 18",
+        "current_gunning_fog": 18.31,
+        "previous_gunning_fog": 17.83,
+        "current_lexicon_count": 136.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Employment+Agencies+Act+1958+Section+18",
+        "diff": 0.4800000000000004
+      },
+      {
+        "index": "Employment of Foreign Manpower Act 1990 Section 5",
+        "current_gunning_fog": 21.13,
+        "previous_gunning_fog": 23.79,
+        "current_lexicon_count": 407.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Employment+of+Foreign+Manpower+Act+1990+Section+5",
+        "diff": -2.66
+      },
+      {
+        "index": "Enlistment Act 1970 Section 3",
+        "current_gunning_fog": 19.56,
+        "previous_gunning_fog": 19.56,
+        "current_lexicon_count": 77.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Enlistment+Act+1970+Section+3",
+        "diff": 0.0
+      },
+      {
+        "index": "Estate Agents Act 2010 Section 9",
+        "current_gunning_fog": 42.41,
+        "previous_gunning_fog": 42.75,
+        "current_lexicon_count": 277.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Estate+Agents+Act+2010+Section+9",
+        "diff": -0.3400000000000034
+      },
+      {
+        "index": "Evidence (Civil Proceedings in Other Jurisdictions) Act 1979 Section 5",
+        "current_gunning_fog": 32.87,
+        "previous_gunning_fog": 32.63,
+        "current_lexicon_count": 285.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Evidence+%28Civil+Proceedings+in+Other+Jurisdictions%29+Act+1979+Section+5",
+        "diff": 0.23999999999999488
+      },
+      {
+        "index": "Evidence Act 1893 Section 5",
+        "current_gunning_fog": 18.61,
+        "previous_gunning_fog": 18.55,
+        "current_lexicon_count": 194.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Evidence+Act+1893+Section+5",
+        "diff": 0.05999999999999872
+      },
+      {
+        "index": "Evidence Act 1893 Section 17",
+        "current_gunning_fog": 17.68,
+        "previous_gunning_fog": 17.56,
+        "current_lexicon_count": 63.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Evidence+Act+1893+Section+17",
+        "diff": 0.120000000000001
+      },
+      {
+        "index": "Evidence Act 1893 Section 61",
+        "current_gunning_fog": 11.35,
+        "previous_gunning_fog": 11.35,
+        "current_lexicon_count": 13.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Evidence+Act+1893+Section+61",
+        "diff": 0.0
+      },
+      {
+        "index": "Evidence Act 1893 Section 64",
+        "current_gunning_fog": 16.72,
+        "previous_gunning_fog": 16.86,
+        "current_lexicon_count": 273.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Evidence+Act+1893+Section+64",
+        "diff": -0.14000000000000057
+      },
+      {
+        "index": "Evidence Act 1893 Section 108",
+        "current_gunning_fog": 13.68,
+        "previous_gunning_fog": 13.28,
+        "current_lexicon_count": 80.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Evidence+Act+1893+Section+108",
+        "diff": 0.40000000000000036
+      },
+      {
+        "index": "Extradition Act 1968 Section 6",
+        "current_gunning_fog": 27.04,
+        "previous_gunning_fog": 28.51,
+        "current_lexicon_count": 112.0,
+        "url": "https://share.streamlit.io/houfu/plus-explorer/main/explorer.py?section=Extradition+Act+1968+Section+6",
+        "diff": -1.4700000000000024
+      }
+    ]
+  }
+}

@@ -1,0 +1,948 @@
+{
+  "config": {
+    "view": {
+      "continuousWidth": 400,
+      "continuousHeight": 300
+    }
+  },
+  "data": {
+    "name": "data-511345388d2de7c7bd6cb73c708b25c7"
+  },
+  "mark": "rect",
+  "encoding": {
+    "color": {
+      "aggregate": "count",
+      "type": "quantitative"
+    },
+    "x": {
+      "bin": {
+        "step": 100
+      },
+      "field": "current_lexicon_count",
+      "title": "2020 Word Count",
+      "type": "ordinal"
+    },
+    "y": {
+      "field": "diff",
+      "title": "Change in Word Count",
+      "type": "ordinal"
+    }
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json",
+  "datasets": {
+    "data-511345388d2de7c7bd6cb73c708b25c7": [
+      {
+        "index": "Civil Law Act 1909 Section 6",
+        "previous_lexicon_count": 129.0,
+        "current_lexicon_count": 129.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Consumer Protection (Fair Trading) Act 2003 Section 27",
+        "previous_lexicon_count": 203.0,
+        "current_lexicon_count": 204.0,
+        "diff": 1.0
+      },
+      {
+        "index": "Constitution of the Republic of Singapore Section 5",
+        "previous_lexicon_count": 89.0,
+        "current_lexicon_count": 75.0,
+        "diff": -14.0
+      },
+      {
+        "index": "Contributory Negligence and Personal Injuries Act 1953 Section 3",
+        "previous_lexicon_count": 335.0,
+        "current_lexicon_count": 335.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Community Disputes Resolution Act 2015 Section 12",
+        "previous_lexicon_count": 47.0,
+        "current_lexicon_count": 46.0,
+        "diff": -1.0
+      },
+      {
+        "index": "Corruption, Drug Trafficking and Other Serious Crimes (Confiscation of Benefits) Act 1992 Section 16",
+        "previous_lexicon_count": 287.0,
+        "current_lexicon_count": 292.0,
+        "diff": 5.0
+      },
+      {
+        "index": "Criminal Law (Temporary Provisions) Act 1955 Section 4",
+        "previous_lexicon_count": 206.0,
+        "current_lexicon_count": 206.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Criminal Law (Temporary Provisions) Act 1955 Section 16",
+        "previous_lexicon_count": 141.0,
+        "current_lexicon_count": 140.0,
+        "diff": -1.0
+      },
+      {
+        "index": "Customs Act 1960 Section 33",
+        "previous_lexicon_count": 30.0,
+        "current_lexicon_count": 31.0,
+        "diff": 1.0
+      },
+      {
+        "index": "Customs Act 1960 Section 37",
+        "previous_lexicon_count": 134.0,
+        "current_lexicon_count": 134.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Cybersecurity Act 2018 Section 7",
+        "previous_lexicon_count": 576.0,
+        "current_lexicon_count": 576.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Destitute Persons Act 1989 Section 15",
+        "previous_lexicon_count": 26.0,
+        "current_lexicon_count": 26.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Destitute Persons Act 1989 Section 19",
+        "previous_lexicon_count": 45.0,
+        "current_lexicon_count": 40.0,
+        "diff": -5.0
+      },
+      {
+        "index": "Distress Act 1934 Section 17",
+        "previous_lexicon_count": 106.0,
+        "current_lexicon_count": 106.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Dangerous Fireworks Act 1972 Section 4",
+        "previous_lexicon_count": 237.0,
+        "current_lexicon_count": 242.0,
+        "diff": 5.0
+      },
+      {
+        "index": "Defence Science and Technology Agency Act 2000 Section 31",
+        "previous_lexicon_count": 107.0,
+        "current_lexicon_count": 106.0,
+        "diff": -1.0
+      },
+      {
+        "index": "Defence Science and Technology Agency Act 2000 Section 32",
+        "previous_lexicon_count": 212.0,
+        "current_lexicon_count": 226.0,
+        "diff": 14.0
+      },
+      {
+        "index": "Deposit Insurance and Policy Owners\u2019 Protection Schemes Act 2011 Section 5",
+        "previous_lexicon_count": 133.0,
+        "current_lexicon_count": 132.0,
+        "diff": -1.0
+      },
+      {
+        "index": "Deposit Insurance and Policy Owners\u2019 Protection Schemes Act 2011 Section 21",
+        "previous_lexicon_count": 205.0,
+        "current_lexicon_count": 202.0,
+        "diff": -3.0
+      },
+      {
+        "index": "District Cooling Act 2001 Section 19",
+        "previous_lexicon_count": 126.0,
+        "current_lexicon_count": 126.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Deep Seabed Mining Act 2015 Section 17",
+        "previous_lexicon_count": 90.0,
+        "current_lexicon_count": 90.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Debtors Act 1934 Section 6",
+        "previous_lexicon_count": 123.0,
+        "current_lexicon_count": 123.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Accountants Act 2004 Section 22",
+        "previous_lexicon_count": 113.0,
+        "current_lexicon_count": 115.0,
+        "diff": 2.0
+      },
+      {
+        "index": "Accountants Act 2004 Section 36",
+        "previous_lexicon_count": 367.0,
+        "current_lexicon_count": 370.0,
+        "diff": 3.0
+      },
+      {
+        "index": "Active Mobility Act 2017 Section 12",
+        "previous_lexicon_count": 87.0,
+        "current_lexicon_count": 87.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Active Mobility Act 2017 Section 23A",
+        "previous_lexicon_count": 295.0,
+        "current_lexicon_count": 295.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Active Mobility Act 2017 Section 24",
+        "previous_lexicon_count": 375.0,
+        "current_lexicon_count": 375.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Administration of Justice (Protection) Act 2016 Section 17",
+        "previous_lexicon_count": 180.0,
+        "current_lexicon_count": 172.0,
+        "diff": -8.0
+      },
+      {
+        "index": "Administration of Justice (Protection) Act 2016 Section 33",
+        "previous_lexicon_count": 41.0,
+        "current_lexicon_count": 40.0,
+        "diff": -1.0
+      },
+      {
+        "index": "Administration of Justice (Protection) Act 2016 Section 34",
+        "previous_lexicon_count": 179.0,
+        "current_lexicon_count": 160.0,
+        "diff": -19.0
+      },
+      {
+        "index": "Administration of Muslim Law Act 1966 Section 5",
+        "previous_lexicon_count": 247.0,
+        "current_lexicon_count": 246.0,
+        "diff": -1.0
+      },
+      {
+        "index": "Administration of Muslim Law Act 1966 Section 27",
+        "previous_lexicon_count": 191.0,
+        "current_lexicon_count": 193.0,
+        "diff": 2.0
+      },
+      {
+        "index": "Adoption of Children Act 1939 Section 3",
+        "previous_lexicon_count": 170.0,
+        "current_lexicon_count": 170.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Adoption of Children Act 1939 Section 7",
+        "previous_lexicon_count": 949.0,
+        "current_lexicon_count": 948.0,
+        "diff": -1.0
+      },
+      {
+        "index": "Advance Medical Directive Act 1996 Section 13",
+        "previous_lexicon_count": 96.0,
+        "current_lexicon_count": 100.0,
+        "diff": 4.0
+      },
+      {
+        "index": "Advance Medical Directive Act 1996 Section 21",
+        "previous_lexicon_count": 82.0,
+        "current_lexicon_count": 84.0,
+        "diff": 2.0
+      },
+      {
+        "index": "Air Navigation Act 1966 Section 4",
+        "previous_lexicon_count": 442.0,
+        "current_lexicon_count": 438.0,
+        "diff": -4.0
+      },
+      {
+        "index": "Air Navigation Act 1966 Section 27",
+        "previous_lexicon_count": 550.0,
+        "current_lexicon_count": 555.0,
+        "diff": 5.0
+      },
+      {
+        "index": "Animals and Birds Act 1965 Section 10",
+        "previous_lexicon_count": 243.0,
+        "current_lexicon_count": 245.0,
+        "diff": 2.0
+      },
+      {
+        "index": "Animals and Birds Act 1965 Section 28",
+        "previous_lexicon_count": 99.0,
+        "current_lexicon_count": 99.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Apostille Act 2020 Section 6",
+        "previous_lexicon_count": 165.0,
+        "current_lexicon_count": 165.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Apostille Act 2020 Section 17",
+        "previous_lexicon_count": 123.0,
+        "current_lexicon_count": 123.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Arbitration Act 2001 Section 4",
+        "previous_lexicon_count": 313.0,
+        "current_lexicon_count": 317.0,
+        "diff": 4.0
+      },
+      {
+        "index": "Arbitration Act 2001 Section 39",
+        "previous_lexicon_count": 248.0,
+        "current_lexicon_count": 254.0,
+        "diff": 6.0
+      },
+      {
+        "index": "Architects Act 1991 Section 31J",
+        "previous_lexicon_count": 83.0,
+        "current_lexicon_count": 83.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Arms and Explosives Act 1913 Section 6",
+        "previous_lexicon_count": 293.0,
+        "current_lexicon_count": 283.0,
+        "diff": -10.0
+      },
+      {
+        "index": "Arms and Explosives Act 1913 Section 22",
+        "previous_lexicon_count": 117.0,
+        "current_lexicon_count": 117.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Audit Act 1966 Section 6A",
+        "previous_lexicon_count": 231.0,
+        "current_lexicon_count": 230.0,
+        "diff": -1.0
+      },
+      {
+        "index": "Banking Act 1970 Section 9",
+        "previous_lexicon_count": 505.0,
+        "current_lexicon_count": 495.0,
+        "diff": -10.0
+      },
+      {
+        "index": "Banking Act 1970 Section 57B",
+        "previous_lexicon_count": 101.0,
+        "current_lexicon_count": 103.0,
+        "diff": 2.0
+      },
+      {
+        "index": "Betting Act 1960 Section 17",
+        "previous_lexicon_count": 47.0,
+        "current_lexicon_count": 47.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Bills of Exchange Act 1949 Section 8",
+        "previous_lexicon_count": 147.0,
+        "current_lexicon_count": 147.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Bills of Exchange Act 1949 Section 22",
+        "previous_lexicon_count": 109.0,
+        "current_lexicon_count": 109.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Bills of Exchange Act 1949 Section 47",
+        "previous_lexicon_count": 62.0,
+        "current_lexicon_count": 62.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Bills of Lading Act 1992 Section 3",
+        "previous_lexicon_count": 235.0,
+        "current_lexicon_count": 232.0,
+        "diff": -3.0
+      },
+      {
+        "index": "Bills of Sale Act 1886 Section 17",
+        "previous_lexicon_count": 188.0,
+        "current_lexicon_count": 176.0,
+        "diff": -12.0
+      },
+      {
+        "index": "Broadcasting Act 1994 Section 9",
+        "previous_lexicon_count": 122.0,
+        "current_lexicon_count": 121.0,
+        "diff": -1.0
+      },
+      {
+        "index": "Broadcasting Act 1994 Section 59",
+        "previous_lexicon_count": 111.0,
+        "current_lexicon_count": 109.0,
+        "diff": -2.0
+      },
+      {
+        "index": "Building Control Act 1989 Section 22E",
+        "previous_lexicon_count": 488.0,
+        "current_lexicon_count": 492.0,
+        "diff": 4.0
+      },
+      {
+        "index": "Building Control Act 1989 Section 31",
+        "previous_lexicon_count": 455.0,
+        "current_lexicon_count": 464.0,
+        "diff": 9.0
+      },
+      {
+        "index": "Carbon Pricing Act 2018 Section 26",
+        "previous_lexicon_count": 37.0,
+        "current_lexicon_count": 37.0,
+        "diff": 0.0
+      },
+      {
+        "index": "CareShield Life and Long-Term Care Act 2019 Section 20",
+        "previous_lexicon_count": 216.0,
+        "current_lexicon_count": 216.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Carriage by Air Act 1988 Section 6",
+        "previous_lexicon_count": 344.0,
+        "current_lexicon_count": 338.0,
+        "diff": -6.0
+      },
+      {
+        "index": "Carriage of Goods by Sea Act 1972 Section 4",
+        "previous_lexicon_count": 34.0,
+        "current_lexicon_count": 34.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Casino Control Act 2006 Section 41",
+        "previous_lexicon_count": 59.0,
+        "current_lexicon_count": 59.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Casino Control Act 2006 Section 99",
+        "previous_lexicon_count": 52.0,
+        "current_lexicon_count": 52.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Census Act 1973 Section 7",
+        "previous_lexicon_count": 69.0,
+        "current_lexicon_count": 73.0,
+        "diff": 4.0
+      },
+      {
+        "index": "Census Act 1973 Section 25",
+        "previous_lexicon_count": 49.0,
+        "current_lexicon_count": 49.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Charities Act 1994 Section 9",
+        "previous_lexicon_count": 581.0,
+        "current_lexicon_count": 577.0,
+        "diff": -4.0
+      },
+      {
+        "index": "Charities Act 1994 Section 20",
+        "previous_lexicon_count": 721.0,
+        "current_lexicon_count": 718.0,
+        "diff": -3.0
+      },
+      {
+        "index": "Children and Young Persons Act 1993 Section 16",
+        "previous_lexicon_count": 265.0,
+        "current_lexicon_count": 266.0,
+        "diff": 1.0
+      },
+      {
+        "index": "Children and Young Persons Act 1993 Section 44",
+        "previous_lexicon_count": 351.0,
+        "current_lexicon_count": 366.0,
+        "diff": 15.0
+      },
+      {
+        "index": "Children and Young Persons Act 1993 Section 81",
+        "previous_lexicon_count": 217.0,
+        "current_lexicon_count": 221.0,
+        "diff": 4.0
+      },
+      {
+        "index": "Children and Young Persons Act 1993 Section 23",
+        "previous_lexicon_count": 94.0,
+        "current_lexicon_count": 94.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Contracts (Rights of Third Parties) Act 2001 Section 4",
+        "previous_lexicon_count": 309.0,
+        "current_lexicon_count": 322.0,
+        "diff": 13.0
+      },
+      {
+        "index": "Community Disputes Resolution Act 2015 Section 4",
+        "previous_lexicon_count": 380.0,
+        "current_lexicon_count": 380.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Community Disputes Resolution Act 2015 Section 23",
+        "previous_lexicon_count": 111.0,
+        "current_lexicon_count": 111.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Compulsory Education Act 2000 Section 3",
+        "previous_lexicon_count": 124.0,
+        "current_lexicon_count": 120.0,
+        "diff": -4.0
+      },
+      {
+        "index": "Computer Misuse Act 1993 Section 3",
+        "previous_lexicon_count": 175.0,
+        "current_lexicon_count": 176.0,
+        "diff": 1.0
+      },
+      {
+        "index": "Computer Misuse Act 1993 Section 12",
+        "previous_lexicon_count": 68.0,
+        "current_lexicon_count": 68.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Contributory Negligence and Personal Injuries Act 1953 Section 3",
+        "previous_lexicon_count": 335.0,
+        "current_lexicon_count": 335.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Consumer Protection (Fair Trading) Act 2003 Section 4",
+        "previous_lexicon_count": 115.0,
+        "current_lexicon_count": 114.0,
+        "diff": -1.0
+      },
+      {
+        "index": "Consumer Protection (Fair Trading) Act 2003 Section 29",
+        "previous_lexicon_count": 206.0,
+        "current_lexicon_count": 206.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Consumer Protection (Fair Trading) Act 2003 Section 41",
+        "previous_lexicon_count": 98.0,
+        "current_lexicon_count": 100.0,
+        "diff": 2.0
+      },
+      {
+        "index": "Criminal Procedure Code 2010 Section 7",
+        "previous_lexicon_count": 223.0,
+        "current_lexicon_count": 221.0,
+        "diff": -2.0
+      },
+      {
+        "index": "Criminal Procedure Code 2010 Section 33",
+        "previous_lexicon_count": 169.0,
+        "current_lexicon_count": 171.0,
+        "diff": 2.0
+      },
+      {
+        "index": "Criminal Procedure Code 2010 Section 161",
+        "previous_lexicon_count": 247.0,
+        "current_lexicon_count": 246.0,
+        "diff": -1.0
+      },
+      {
+        "index": "Criminal Procedure Code 2010 Section 224",
+        "previous_lexicon_count": 305.0,
+        "current_lexicon_count": 308.0,
+        "diff": 3.0
+      },
+      {
+        "index": "Criminal Procedure Code 2010 Section 307",
+        "previous_lexicon_count": 113.0,
+        "current_lexicon_count": 114.0,
+        "diff": 1.0
+      },
+      {
+        "index": "Criminal Procedure Code 2010 Section 308",
+        "previous_lexicon_count": 252.0,
+        "current_lexicon_count": 253.0,
+        "diff": 1.0
+      },
+      {
+        "index": "Criminal Procedure Code 2010 Section 357",
+        "previous_lexicon_count": 269.0,
+        "current_lexicon_count": 275.0,
+        "diff": 6.0
+      },
+      {
+        "index": "Holidays Act 1998 Section 4",
+        "previous_lexicon_count": 56.0,
+        "current_lexicon_count": 56.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Sale of Goods Act 1979 Section 12",
+        "previous_lexicon_count": 341.0,
+        "current_lexicon_count": 340.0,
+        "diff": -1.0
+      },
+      {
+        "index": "Sale of Goods Act 1979 Section 34",
+        "previous_lexicon_count": 61.0,
+        "current_lexicon_count": 61.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Sale of Goods Act 1979 Section 81T",
+        "previous_lexicon_count": 57.0,
+        "current_lexicon_count": 57.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Securities and Futures Act 2001 Section 81U",
+        "previous_lexicon_count": 342.0,
+        "current_lexicon_count": 340.0,
+        "diff": -2.0
+      },
+      {
+        "index": "Securities and Futures Act 2001 Section 199",
+        "previous_lexicon_count": 137.0,
+        "current_lexicon_count": 141.0,
+        "diff": 4.0
+      },
+      {
+        "index": "Sedition Act 1948 Section 3",
+        "previous_lexicon_count": 348.0,
+        "current_lexicon_count": 350.0,
+        "diff": 2.0
+      },
+      {
+        "index": "Silver Support Scheme Act 2015 Section 6",
+        "previous_lexicon_count": 135.0,
+        "current_lexicon_count": 133.0,
+        "diff": -2.0
+      },
+      {
+        "index": "Singapore Arms and Flag and National Anthem Act 1959 Section 2",
+        "previous_lexicon_count": 93.0,
+        "current_lexicon_count": 93.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Singapore Convention on Mediation Act 2020 Section 4",
+        "previous_lexicon_count": 195.0,
+        "current_lexicon_count": 195.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Official Secrets Act 1935 Section 9",
+        "previous_lexicon_count": 174.0,
+        "current_lexicon_count": 173.0,
+        "diff": -1.0
+      },
+      {
+        "index": "Oaths and Declarations Act 2000 Section 11",
+        "previous_lexicon_count": 60.0,
+        "current_lexicon_count": 56.0,
+        "diff": -4.0
+      },
+      {
+        "index": "Organised Crime Act 2015 Section 12",
+        "previous_lexicon_count": 180.0,
+        "current_lexicon_count": 180.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Organised Crime Act 2015 Section 28",
+        "previous_lexicon_count": 302.0,
+        "current_lexicon_count": 305.0,
+        "diff": 3.0
+      },
+      {
+        "index": "Weights and Measures Act 1975 Section 32",
+        "previous_lexicon_count": 125.0,
+        "current_lexicon_count": 135.0,
+        "diff": 10.0
+      },
+      {
+        "index": "Parks and Trees Act 2005 Section 14",
+        "previous_lexicon_count": 250.0,
+        "current_lexicon_count": 249.0,
+        "diff": -1.0
+      },
+      {
+        "index": "Payment Services Act 2019 Section 15",
+        "previous_lexicon_count": 239.0,
+        "current_lexicon_count": 237.0,
+        "diff": -2.0
+      },
+      {
+        "index": "Personal Data Protection Act 2012 Section 3",
+        "previous_lexicon_count": 57.0,
+        "current_lexicon_count": 57.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Personal Data Protection Act 2012 Section 24",
+        "previous_lexicon_count": 48.0,
+        "current_lexicon_count": 48.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Presidential Elections Act 1991 Section 10",
+        "previous_lexicon_count": 425.0,
+        "current_lexicon_count": 433.0,
+        "diff": 8.0
+      },
+      {
+        "index": "Prevention of Corruption Act 1960 Section 6",
+        "previous_lexicon_count": 236.0,
+        "current_lexicon_count": 236.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Prevention of Human Trafficking Act 2014 Section 11",
+        "previous_lexicon_count": 80.0,
+        "current_lexicon_count": 81.0,
+        "diff": 1.0
+      },
+      {
+        "index": "Prevention of Human Trafficking Act 2014 Section 21",
+        "previous_lexicon_count": 263.0,
+        "current_lexicon_count": 263.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Private Education Act 2009 Section 19",
+        "previous_lexicon_count": 207.0,
+        "current_lexicon_count": 207.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Prevention of Pollution of the Sea Act 1990 Section 5",
+        "previous_lexicon_count": 73.0,
+        "current_lexicon_count": 73.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Private Security Industry Act 2007 Section 26",
+        "previous_lexicon_count": 251.0,
+        "current_lexicon_count": 249.0,
+        "diff": -2.0
+      },
+      {
+        "index": "Probate and Administration Act 1934 Section 26",
+        "previous_lexicon_count": 41.0,
+        "current_lexicon_count": 41.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Probate and Administration Act 1934 Section 39",
+        "previous_lexicon_count": 101.0,
+        "current_lexicon_count": 101.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Probation of Offenders Act 1951 Section 5",
+        "previous_lexicon_count": 838.0,
+        "current_lexicon_count": 828.0,
+        "diff": -10.0
+      },
+      {
+        "index": "Planning Act 1998 Section 49",
+        "previous_lexicon_count": 39.0,
+        "current_lexicon_count": 40.0,
+        "diff": 1.0
+      },
+      {
+        "index": "Point-to-Point Passenger Transport Industry Act 2019 Section 3",
+        "previous_lexicon_count": 235.0,
+        "current_lexicon_count": 236.0,
+        "diff": 1.0
+      },
+      {
+        "index": "Poisons Act 1938 Section 9",
+        "previous_lexicon_count": 221.0,
+        "current_lexicon_count": 221.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Political Donations Act 2000 Section 12",
+        "previous_lexicon_count": 243.0,
+        "current_lexicon_count": 242.0,
+        "diff": -1.0
+      },
+      {
+        "index": "Public Entertainments Act 1958 Section 9",
+        "previous_lexicon_count": 9.0,
+        "current_lexicon_count": 8.0,
+        "diff": -1.0
+      },
+      {
+        "index": "Property Tax Act 1960 Section 10",
+        "previous_lexicon_count": 302.0,
+        "current_lexicon_count": 297.0,
+        "diff": -5.0
+      },
+      {
+        "index": "Protection from Online Falsehoods and Manipulation Act 2019 Section 16",
+        "previous_lexicon_count": 207.0,
+        "current_lexicon_count": 207.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Protection from Harassment Act 2014 Section 7",
+        "previous_lexicon_count": 901.0,
+        "current_lexicon_count": 894.0,
+        "diff": -7.0
+      },
+      {
+        "index": "Public Trustee Act 1915 Section 4",
+        "previous_lexicon_count": 519.0,
+        "current_lexicon_count": 541.0,
+        "diff": 22.0
+      },
+      {
+        "index": "Public Utilities Act 2001 Section 5",
+        "previous_lexicon_count": 46.0,
+        "current_lexicon_count": 39.0,
+        "diff": -7.0
+      },
+      {
+        "index": "Penal Code 1871 Section 26F",
+        "previous_lexicon_count": 56.0,
+        "current_lexicon_count": 56.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Penal Code 1871 Section 80",
+        "previous_lexicon_count": 213.0,
+        "current_lexicon_count": 213.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Penal Code 1871 Section 107",
+        "previous_lexicon_count": 238.0,
+        "current_lexicon_count": 238.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Penal Code 1871 Section 142",
+        "previous_lexicon_count": 30.0,
+        "current_lexicon_count": 30.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Penal Code 1871 Section 182",
+        "previous_lexicon_count": 298.0,
+        "current_lexicon_count": 298.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Penal Code 1871 Section 300",
+        "previous_lexicon_count": 1933.0,
+        "current_lexicon_count": 1924.0,
+        "diff": -9.0
+      },
+      {
+        "index": "Penal Code 1871 Section 464",
+        "previous_lexicon_count": 1308.0,
+        "current_lexicon_count": 1306.0,
+        "diff": -2.0
+      },
+      {
+        "index": "Early Childhood Development Centres Act 2017 Section 17",
+        "previous_lexicon_count": 332.0,
+        "current_lexicon_count": 328.0,
+        "diff": -4.0
+      },
+      {
+        "index": "Electronic Transactions Act 2010 Section 5",
+        "previous_lexicon_count": 162.0,
+        "current_lexicon_count": 160.0,
+        "diff": -2.0
+      },
+      {
+        "index": "Electronic Transactions Act 2010 Section 26",
+        "previous_lexicon_count": 266.0,
+        "current_lexicon_count": 263.0,
+        "diff": -3.0
+      },
+      {
+        "index": "Employment Act 1968 Section 37",
+        "previous_lexicon_count": 557.0,
+        "current_lexicon_count": 573.0,
+        "diff": 16.0
+      },
+      {
+        "index": "Employment Agencies Act 1958 Section 18",
+        "previous_lexicon_count": 133.0,
+        "current_lexicon_count": 136.0,
+        "diff": 3.0
+      },
+      {
+        "index": "Employment of Foreign Manpower Act 1990 Section 5",
+        "previous_lexicon_count": 418.0,
+        "current_lexicon_count": 407.0,
+        "diff": -11.0
+      },
+      {
+        "index": "Enlistment Act 1970 Section 3",
+        "previous_lexicon_count": 77.0,
+        "current_lexicon_count": 77.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Estate Agents Act 2010 Section 9",
+        "previous_lexicon_count": 280.0,
+        "current_lexicon_count": 277.0,
+        "diff": -3.0
+      },
+      {
+        "index": "Evidence (Civil Proceedings in Other Jurisdictions) Act 1979 Section 5",
+        "previous_lexicon_count": 284.0,
+        "current_lexicon_count": 285.0,
+        "diff": 1.0
+      },
+      {
+        "index": "Evidence Act 1893 Section 5",
+        "previous_lexicon_count": 193.0,
+        "current_lexicon_count": 194.0,
+        "diff": 1.0
+      },
+      {
+        "index": "Evidence Act 1893 Section 17",
+        "previous_lexicon_count": 62.0,
+        "current_lexicon_count": 63.0,
+        "diff": 1.0
+      },
+      {
+        "index": "Evidence Act 1893 Section 61",
+        "previous_lexicon_count": 13.0,
+        "current_lexicon_count": 13.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Evidence Act 1893 Section 64",
+        "previous_lexicon_count": 273.0,
+        "current_lexicon_count": 273.0,
+        "diff": 0.0
+      },
+      {
+        "index": "Evidence Act 1893 Section 108",
+        "previous_lexicon_count": 76.0,
+        "current_lexicon_count": 80.0,
+        "diff": 4.0
+      },
+      {
+        "index": "Extradition Act 1968 Section 6",
+        "previous_lexicon_count": 119.0,
+        "current_lexicon_count": 112.0,
+        "diff": -7.0
+      }
+    ]
+  }
+}
